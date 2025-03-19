@@ -1,8 +1,8 @@
-<h2 align="left">Hi 👋! Amaljith Here!!</h2>
+<h1 align="left"><samp>Hi 👋! Amaljith Here!!</samp></h2>
 
 ###
 
-<p align="left">I'm UI/UX Frontend Developer</p>
+<p align="left"><samp>I'm UI/UX Frontend Developer</samp></p>
 
 ###
 
