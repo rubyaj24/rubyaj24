@@ -34,8 +34,6 @@
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=arduino" height="30" alt="arduino logo"  />
   <img width="12" />
-  <img src="https://skillicons.dev/icons?i=androidstudio" height="30" alt="androidstudio logo"  />
-  <img width="12" />
   <img src="https://skillicons.dev/icons?i=bootstrap" height="30" alt="bootstrap logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=discord" height="30" alt="discord logo"  />
