@@ -1,0 +1,10 @@
+.track {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.track div {
+  position: absolute;
+  width: max-content;
+}
