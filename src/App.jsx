@@ -17,6 +17,16 @@ function App() {
         <HeroSection />
       </div>
       <div><Projects /></div>
+      <div className="relative z-10 mt-10">
+      <footer className="relative bottom-0 left-0 w-full p-4 text-center text-zinc-400">
+        <p className="text-sm">
+          &copy; {new Date().getFullYear()} Amaljith M V. All rights reserved.
+        </p>
+        <p className="text-sm">
+          Built with <span className="text-red-500">❤️</span> using Vite+React and Tailwind CSS.
+        </p>
+      </footer>
+      </div>
     </div>
   )
 }

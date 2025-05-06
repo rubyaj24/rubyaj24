@@ -19,6 +19,16 @@
   animation: glowPulse 4s ease-in-out infinite;
 }
 
+.hero-card:hover {
+  transform: perspective(1000px) rotateX(10deg) scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-card:hover::after {
+  transform: scale(1.05) perspective(1000px) rotateX(-10deg) scale(1.02);
+  transition: transform 0.5s ease-in-out;
+}
+
 @keyframes glowPulse {
   0%, 100% { opacity: 0.2; }
   50% { opacity: 0.1; }
