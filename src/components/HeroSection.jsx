@@ -1,7 +1,7 @@
 import React from 'react'
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { Card, CardContent, CardFooter, CardTitle } from './ui/card'
 import '../styles/card.css'
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaBehance } from 'react-icons/fa';
 
 const SocialLink = ({ href, icon: Icon, label }) => (
   <a 
@@ -26,8 +26,13 @@ return (
                         Amaljith M V
                     </CardTitle>
                     <CardContent className="p-0 space-y-2">
-                        <p className="text-base text-zinc-200">Front End Developer</p>
-                        <p className="text-base text-zinc-200">UI/UX Designer</p>
+                        <ul className="text-base text-zinc-200">
+                            <li>Student</li>
+                            <li>Front End Developer</li>
+                            <li>UI/UX Designer</li>
+                            <li>Graphic Design</li>
+                            <li>Video Production</li>
+                        </ul>
                         <p className="text-sm text-zinc-400 mt-4">
                             Passionate about creating seamless web experiences and contributing to open-source projects.
                         </p>
@@ -46,6 +51,11 @@ return (
                                 href="https://instagram.com/the.prime.mover"
                                 icon={FaInstagram}
                                 label="Instagram Profile"
+                            />
+                            <SocialLink
+                                href="https://behance.net/amaljithmv"
+                                icon={FaBehance}
+                                label="Behance Profile"
                             />
                         </div>
                     </CardContent>
