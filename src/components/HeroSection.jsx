@@ -18,7 +18,7 @@ const SocialLink = ({ href, icon: Icon, label }) => (
 const HeroSection = () => {
 return (
     <div className="w-full max-w-2xl font-redhat">
-        <Card className="glow-card p-8">
+        <Card className="hero-card glow-card p-8">
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-1 space-y-4">
@@ -54,8 +54,8 @@ return (
             <div className='flex flex-col items-center justify-center'>
             <img 
                 src='https://avatars.githubusercontent.com/rubyaj24' 
-                alt="Technologies" 
-                className="rounded-full border-2 hover:border-0 hover:scale-105 transition-transform duration-500 ease-in-out" 
+                alt="Profile" 
+                className="rounded-full border-2 hover:border-0 hover:scale-105 transition-all duration-500 ease-in-out" 
             />
             </div>
             </div>
