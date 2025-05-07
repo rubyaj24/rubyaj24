@@ -1,7 +1,8 @@
 import React from 'react'
 import { Card, CardContent, CardFooter, CardTitle } from './ui/card'
 import '../styles/card.css'
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaBehance } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin, FaBehance, FaWhatsapp } from 'react-icons/fa';
+import { SiGmail } from "react-icons/si";
 
 const SocialLink = ({ href, icon: Icon, label }) => (
   <a 
@@ -17,7 +18,7 @@ const SocialLink = ({ href, icon: Icon, label }) => (
 
 const HeroSection = () => {
 return (
-    <div className="w-full max-w-2xl font-redhat">
+    <div className="w-full max-w-2xl sm:max-w-xl font-redhat">
         <Card className="hero-card glow-card p-8">
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div className="flex flex-col md:flex-row items-center gap-8">
@@ -56,6 +57,16 @@ return (
                                 href="https://behance.net/amaljithmv"
                                 icon={FaBehance}
                                 label="Behance Profile"
+                            />
+                            <SocialLink
+                                href="mailto:amaljithmvinod@gmail.com"
+                                icon={SiGmail}
+                                label="Email Me"
+                            />
+                            <SocialLink
+                                href="https://wa.me/918848799145"
+                                icon={FaWhatsapp}
+                                label="WhatsApp Profile"
                             />
                         </div>
                     </CardContent>

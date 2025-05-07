@@ -52,11 +52,11 @@ const Projects = () => {
     ];
     
     return (
-    <div className='gap-4 m-6'>
-        <div className="flex items-center justify-center bg-black text-white font-redhat">
+    <div className='w-full px-6'>
+        <div className="flex items-center justify-center text-white font-redhat mb-8">
             <h1 className="text-4xl font-bold">My Projects</h1>
         </div>
-        <Card className={"glow-card p-8 mt-4"}>
+        <Card className={"glow-card p-8"}>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 p-6">
                 {projects.map((project, index) => (
                     <div 

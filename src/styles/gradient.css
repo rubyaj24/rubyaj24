@@ -10,6 +10,7 @@
 
 .ell {
   position: absolute;
+  opacity: 0;
   border-radius: 100%;
   mix-blend-mode: screen;
   animation-iteration-count: infinite;
@@ -18,7 +19,7 @@
 
 .one {
   background: #7928ca;
-  opacity: 0.6;
+  opacity: 0.1;
   width: 700px;
   height: 700px;
   z-index: -2;
@@ -31,7 +32,7 @@
 
 .two {
   background: #ff0080;
-  opacity: 0.6;
+  opacity: 0.1;
   width: 600px;
   height: 600px;
   z-index: -1;
@@ -44,7 +45,7 @@
 
 .three {
   background: #0070f3;
-  opacity: 0.6;
+  opacity: 0.1;
   width: 500px;
   height: 500px;
   z-index: -3;
@@ -59,7 +60,7 @@
   25% { transform: translateY(-50%) translateX(-50%) skew(-15deg, -15deg) rotate(80deg) translateX(30%); }
   50% { transform: translateY(-50%) translateX(-50%) rotate(180deg) translateX(25%); }
   75% { transform: translateY(-50%) translateX(-50%) skew(15deg, 15deg) rotate(240deg) translateX(15%); }
-  100% { transform: translateY(-50%) translateX(-50%) rotate(340deg) translateX(20%); }
+  100% { transform: translateY(-50%) translateX(-50%) rotate(-20deg) translateX(20%); }
 }
 
 @keyframes anim-two {
@@ -67,7 +68,7 @@
   25% { transform: translateY(-50%) translateX(-50%) skew(15deg, 15deg) rotate(110deg) translateX(-5%); }
   50% { transform: translateY(-50%) translateX(-50%) rotate(210deg) translateX(-35%); }
   75% { transform: translateY(-50%) translateX(-50%) skew(-15deg, -15deg) rotate(300deg) translateX(-10%); }
-  100% { transform: translateY(-50%) translateX(-50%) rotate(400deg) translateX(-20%); }
+  100% { transform: translateY(-50%) translateX(-50%) rotate(40deg) translateX(-20%); }
 }
 
 @keyframes anim-three {
