@@ -54,7 +54,7 @@ const Projects = () => {
     return (
     <div className='gap-4 m-6'>
         <div className="flex items-center justify-center bg-black text-white font-redhat">
-            <h1 className="text-4xl font-bold">My Projects</h1>
+            <h1 className="text-4xl font-bold">My Contributions</h1>
         </div>
         <Card className={"glow-card p-8 mt-4"}>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 p-6">
