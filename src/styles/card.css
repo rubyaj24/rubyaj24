@@ -34,6 +34,18 @@
   50% { opacity: 0.1; }
 }
 
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* Add social icon hover effects */
 .social-icon {
   transition: transform 0.2s ease-in-out;
