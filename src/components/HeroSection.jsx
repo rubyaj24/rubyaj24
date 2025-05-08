@@ -18,7 +18,7 @@ const SocialLink = ({ href, icon: Icon, label }) => (
 const HeroSection = () => {
 return (
     <div className="w-full max-w-2xl font-redhat">
-        <Card className="hero-card glow-card p-8">
+        <Card className="hero-card glow-card p-8 animate-in fade-in-0 duration-2000">
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-1 space-y-4">
