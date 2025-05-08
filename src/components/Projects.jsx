@@ -53,7 +53,7 @@ const Projects = () => {
     
     return (
     <div className='gap-4 m-6'>
-        <div className="flex items-center justify-center text-white font-redhat">
+        <div className="flex items-center justify-center text-white/50 font-redhat">
             <h1 className="text-4xl font-bold">My Contributions</h1>
         </div>
         <Card className={"glow-card p-8 mt-4"}>
