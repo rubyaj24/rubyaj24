@@ -1,20 +1,46 @@
 import React from 'react'
+import '../styles/scroll.css'
 
 const ScrollText = () => {
+  const developers = Array(18).fill("Developer")
+  const designers = Array(18).fill("Designer")
+  const Videographer = Array(18).fill("Videographer")
+  
   return (
-    <div className="w-full flex flex-col gap-32">
-      <div className="track">
-        <div className="flex animate-scroll-left whitespace-nowrap">
-          <p className="text-[200px] font-bold mx-4">DEVELOPER</p>
-          <p className="text-[200px] font-bold mx-4">DEVELOPER</p>
-          <p className="text-[200px] font-bold mx-4">DEVELOPER</p>
+    <div className='gap-auto flex flex-col items-center justify-center'>
+      <div className="tag-list">
+        <div className="inner-reverse">
+          {developers.map((text, index) => (
+            <div key={index} className="tag">{text}</div>
+          ))}
         </div>
       </div>
-      <div className="track">
-        <div className="flex animate-scroll-right whitespace-nowrap">
-          <p className="text-[200px] font-bold mx-4">DESIGNER</p>
-          <p className="text-[200px] font-bold mx-4">DESIGNER</p>
-          <p className="text-[200px] font-bold mx-4">DESIGNER</p>
+      <div className="tag-list">
+        <div className="inner">
+          {designers.map((text, index) => (
+            <div key={index} className="tag">{text}</div>
+          ))}
+        </div>
+      </div>
+      <div className="tag-list">
+        <div className="inner">
+          {Videographer.map((text, index) => (
+            <div key={index} className="tag">{text}</div>
+          ))}
+        </div>
+      </div>
+      <div className="tag-list">
+        <div className="inner">
+          {designers.map((text, index) => (
+            <div key={index} className="tag">{text}</div>
+          ))}
+        </div>
+      </div>
+      <div className="tag-list">
+        <div className="inner">
+          {designers.map((text, index) => (
+            <div key={index} className="tag">{text}</div>
+          ))}
         </div>
       </div>
     </div>
