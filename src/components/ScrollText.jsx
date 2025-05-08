@@ -5,6 +5,7 @@ const ScrollText = () => {
   const developers = Array(18).fill("Developer")
   const designers = Array(18).fill("Designer")
   const Videographer = Array(18).fill("Videographer")
+  const student = Array(18).fill("Student")
   
   return (
     <div className='gap-auto flex flex-col items-center justify-center'>
@@ -23,7 +24,7 @@ const ScrollText = () => {
         </div>
       </div>
       <div className="tag-list">
-        <div className="inner">
+        <div className="inner-reverse">
           {Videographer.map((text, index) => (
             <div key={index} className="tag">{text}</div>
           ))}
@@ -37,8 +38,15 @@ const ScrollText = () => {
         </div>
       </div>
       <div className="tag-list">
-        <div className="inner">
-          {designers.map((text, index) => (
+        <div className="inner-reverse">
+          {student.map((text, index) => (
+            <div key={index} className="tag">{text}</div>
+          ))}
+        </div>
+      </div>
+      <div className="tag-list">
+        <div className="inner-reverse">
+          {student.map((text, index) => (
             <div key={index} className="tag">{text}</div>
           ))}
         </div>
