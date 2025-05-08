@@ -34,7 +34,7 @@ return (
                             <li>Video Production</li>
                         </ul>
                         <p className="text-sm text-zinc-400 mt-4">
-                            Passionate about creating seamless web experiences and contributing to open-source projects.
+                            Passionate about creating seamless web experiences and innovative designs. I love to explore new technologies.
                         </p>
                         <div className="flex items-center gap-4 mt-6">
                             <SocialLink
