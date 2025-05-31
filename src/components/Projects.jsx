@@ -1,12 +1,12 @@
 import React from 'react'
 import { Card } from './ui/card'
-import '../styles/animations.css'
 import sargam25 from '../assets/sargam-25.mp4'
 import musprint from '../assets/musprint-cet.png'
 import dfk from '../assets/drug-free-kerala.png'
 import beyondhack from '../assets/beyondhack.mp4'
 import minmark from '../assets/min-mark.png'
 import portfolio from '../assets/portfolio.png'
+import resume from '../assets/resume-builder.png'
 
 const Projects = () => {
     
@@ -27,7 +27,7 @@ const Projects = () => {
         },
         {
             title: 'Drug Free Kerala',
-            description: 'Auth taking page for Drug Free Kerala',
+            description: 'Auth taking page for Drug Free Kerala, developed as a part of permute-25',
             image: dfk,
             link: 'https://drugfreekerala.com/'
         },
@@ -49,6 +49,13 @@ const Projects = () => {
             image: portfolio,
             link: "https://amaljithmv.vercel.app/"
         },
+        {
+            title: 'Resume Builder',
+            description: 'Create resume in minutes',
+            image: resume,
+            link: "https://resumebuilder25.vercel.app/"
+
+        }
     ];
     
     return (
@@ -67,18 +74,20 @@ const Projects = () => {
                             animationFillMode: 'forwards'
                         }}
                     >
-                        <h3 className="text-xl font-bold text-white"><a href={project.link} target="_blank" rel="noopener noreferrer">{project.title}</a></h3>
+                        <a href={project.link}>
+                        <h3 className="text-xl font-bold text-white">{project.title}</h3>
                         <p className="text-gray-400">{project.description}</p>
                         {project.preview ? (
                             <video 
                                 src={project.preview}
-                                className="w-full h-64 mt-4 rounded-lg"
+                                className="w-full mt-4 rounded-lg"
                                 autoPlay
                                 loop
                                 muted
                                 playsInline
                             />
-                        ) : <img src={project.image} alt={project.title} className="w-full h-64 mt-4 rounded-lg text-white" />}
+                        ) : <img src={project.image} alt={project.title} className="w-full mt-4 rounded-lg text-white" />}
+                        </a>
                     </div>
                 ))}
             </div>
