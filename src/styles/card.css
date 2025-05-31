@@ -78,7 +78,7 @@
 @media (max-width: 768px) {
   .project-card {
     min-height: 250px;
-    aspect-ratio: 1.4;
+    aspect-ratio: 1.2;
   }
 }
 
