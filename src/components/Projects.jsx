@@ -27,7 +27,7 @@ const Projects = () => {
         },
         {
             title: 'Drug Free Kerala',
-            description: 'Auth taking page for Drug Free Kerala, developed as a part of permute-25',
+            description: 'Auth taking page for Drug Free Kerala, part of permute-25',
             image: dfk,
             link: 'https://drugfreekerala.com/'
         },
