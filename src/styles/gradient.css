@@ -6,6 +6,7 @@
   filter: blur(100px);
   user-select: none;
   pointer-events: none;
+  width: 100%;
 }
 
 .ell {

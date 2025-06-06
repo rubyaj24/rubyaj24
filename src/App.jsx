@@ -6,8 +6,8 @@ import Projects from "./components/Projects"
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
+    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-black text-white overflow-hidden">
+      <div className="absolute inset-0 z-0 w-full">
         <GradientBackground />
       </div>
       <div className="absolute opacity-5 text-7xl inset-0 z-0 flex items-center justify-center pointer-events-none">
