@@ -7,6 +7,8 @@ import minmark from '../assets/min-mark.png'
 import portfolio from '../assets/portfolio.png'
 import resume from '../assets/resume-builder.png'
 import earth from '../assets/threejs-earth.png'
+import dotslash from '../assets/dotslash-22-promo.mp4'
+import cetalks from '../assets/cetalks_execom.mp4'
 
 const Projects = () => {
     
@@ -84,12 +86,33 @@ const Projects = () => {
         }
     ]
 
+    const video = [
+        {
+            title: 'Dotslash-22 Title promo',
+            video: dotslash,
+            link: 'https://www.instagram.com/reel/DGyKzFOBSYE/?utm_source=ig_web_copy_link&igsh=MTMydWtybXp6bW9ocQ==',
+            tools: ['Blender3d', 'After Effects']
+        },
+        {
+            title: 'MuLearn CET Launch',
+            video: 'https://www.youtube.com/watch?v=example', // Replace with actual video link
+            link: 'https://www.instagram.com/reel/DBd50QOy_s5/',
+            tools: ['Adobe After Effects', 'Premiere Pro'],
+        },
+        {
+            title: 'Cetalks Execom Promo',
+            video: cetalks,
+            link: 'https://www.instagram.com/reel/DChBv2APiIp/',
+            tools: ['Adobe After Effects', 'Premiere Pro'],
+        }
+    ]
+
     return (
-        <div className='gap-4 m-6'>
+        <div className='w-full px-6 py-4'>
             <div className="flex items-center justify-center text-white/50 font-redhat">
                 <h1 className="text-4xl font-bold">My Contributions - Web</h1>
             </div>
-            <Card className={"glow-card p-8 mt-4"}>
+            <Card className={"glow-card p-8 mt-4 w-full"}>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 p-6">
                     {web.map((project, index) => (
                         <div 
@@ -128,10 +151,10 @@ const Projects = () => {
                     ))}
                 </div>
             </Card>
-            <div className="flex items-center justify-center text-white/50 font-redhat mt-6">
+            {/* <div className="flex items-center justify-center text-white/50 font-redhat mt-6">
                 <h1 className="text-4xl font-bold">My Contributions - UI</h1>
             </div>
-            <Card className={"glow-card p-8 mt-4"}>
+            <Card className={"glow-card p-8 mt-4 w-full"}>
                 {ui.map((project, index) => (
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 p-6" key={index}>
                         <div className="project-card p-4 bg-gray-800 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
@@ -155,27 +178,38 @@ const Projects = () => {
                 ))}
             </Card>
             <div className="flex items-center justify-center text-white/50 font-redhat mt-6">
-                <h1 className="text-4xl font-bold">My Contributions - Android</h1>
+                <h1 className="text-4xl font-bold">My Contributions - Video</h1>
             </div>
-            <Card className={"glow-card p-8 mt-4"}>
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 p-6">
-                    <div className="project-card p-4 bg-gray-800 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                        <a href="https://your-android-project-link.com">
-                            <h3 className="text-xl font-bold text-white">Android Project Title</h3>
-                            <p className="text-gray-400">Short description of the Android project.</p>
-                            <img src="path/to/android-project-image.png" alt="Android Project" className="w-full mt-4 rounded-lg" />
-                            <div className="flex flex-wrap gap-2 mt-4">
-                                <span className="border-2 border-blue-500/20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-gray-200 px-2 py-1 rounded-lg text-xs">
-                                    Android
-                                </span>
-                                <span className="border-2 border-blue-500/20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-gray-200 px-2 py-1 rounded-lg text-xs">
-                                    Kotlin
-                                </span>
-                            </div>
-                        </a>
+            <Card className={"glow-card p-8 mt-4 w-full"}>
+                {video.map((project, index) => (
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 p-6" key={index}>
+                        <div className="project-card p-4 bg-gray-800 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            <a href={project.link}>
+                                <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                                <p className="text-gray-400">{project.description}</p>
+                                <video
+                                    src={project.video}
+                                    className="w-full mt-4 rounded-lg"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                />
+                                <div className="flex flex-wrap gap-2 mt-4">
+                                    {project.tools.map((tool, i) => (
+                                        <span
+                                            key={i}
+                                            className="border-2 border-blue-500/20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-gray-200 px-2 py-1 rounded-lg text-xs"
+                                        >
+                                            {tool}
+                                        </span>
+                                    ))}
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </Card>
+                ))}
+            </Card> */}
         </div>
     )
 }
