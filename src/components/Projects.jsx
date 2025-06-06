@@ -1,5 +1,5 @@
 import { Card } from './ui/card'
-import sargam25 from '../assets/sargam-25.mp4'
+import sargam25 from '../assets/sargam-25.webm'
 import musprint from '../assets/musprint-cet.png'
 import dfk from '../assets/drug-free-kerala.png'
 import beyondhack from '../assets/beyondhack.mp4'
@@ -7,8 +7,8 @@ import minmark from '../assets/min-mark.png'
 import portfolio from '../assets/portfolio.png'
 import resume from '../assets/resume-builder.png'
 import earth from '../assets/threejs-earth.png'
-import dotslash from '../assets/dotslash-22-promo.mp4'
-import cetalks from '../assets/cetalks_execom.mp4'
+// import dotslash from '../assets/dotslash-22-promo.mp4'
+// import cetalks from '../assets/cetalks_execom.mp4'
 
 const Projects = () => {
     
@@ -76,36 +76,36 @@ const Projects = () => {
         }
     ];
 
-    const ui = [
-        {
-            title: 'Android Project Title',
-            description: 'Short description of the Android project.',
-            image: 'path/to/android-project-image.png',
-            link: 'https://your-android-project-link.com',
-            tools: ['Android', 'Kotlin']
-        }
-    ]
+    // const ui = [
+    //     {
+    //         title: 'Android Project Title',
+    //         description: 'Short description of the Android project.',
+    //         image: 'path/to/android-project-image.png',
+    //         link: 'https://your-android-project-link.com',
+    //         tools: ['Android', 'Kotlin']
+    //     }
+    // ]
 
-    const video = [
-        {
-            title: 'Dotslash-22 Title promo',
-            video: dotslash,
-            link: 'https://www.instagram.com/reel/DGyKzFOBSYE/?utm_source=ig_web_copy_link&igsh=MTMydWtybXp6bW9ocQ==',
-            tools: ['Blender3d', 'After Effects']
-        },
-        {
-            title: 'MuLearn CET Launch',
-            video: 'https://www.youtube.com/watch?v=example', // Replace with actual video link
-            link: 'https://www.instagram.com/reel/DBd50QOy_s5/',
-            tools: ['Adobe After Effects', 'Premiere Pro'],
-        },
-        {
-            title: 'Cetalks Execom Promo',
-            video: cetalks,
-            link: 'https://www.instagram.com/reel/DChBv2APiIp/',
-            tools: ['Adobe After Effects', 'Premiere Pro'],
-        }
-    ]
+    // const video = [
+    //     {
+    //         title: 'Dotslash-22 Title promo',
+    //         video: dotslash,
+    //         link: 'https://www.instagram.com/reel/DGyKzFOBSYE/?utm_source=ig_web_copy_link&igsh=MTMydWtybXp6bW9ocQ==',
+    //         tools: ['Blender3d', 'After Effects']
+    //     },
+    //     {
+    //         title: 'MuLearn CET Launch',
+    //         video: 'https://www.youtube.com/watch?v=example', // Replace with actual video link
+    //         link: 'https://www.instagram.com/reel/DBd50QOy_s5/',
+    //         tools: ['Adobe After Effects', 'Premiere Pro'],
+    //     },
+    //     {
+    //         title: 'Cetalks Execom Promo',
+    //         video: cetalks,
+    //         link: 'https://www.instagram.com/reel/DChBv2APiIp/',
+    //         tools: ['Adobe After Effects', 'Premiere Pro'],
+    //     }
+    // ]
 
     return (
         <div className='w-full px-6 py-4'>
