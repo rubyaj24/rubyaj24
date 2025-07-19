@@ -7,6 +7,7 @@ import minmark from '../assets/min-mark.png'
 import portfolio from '../assets/portfolio.png'
 import resume from '../assets/resume-builder.png'
 import earth from '../assets/threejs-earth.png'
+import mument from '../assets/mument.png'
 // import dotslash from '../assets/dotslash-22-promo.mp4'
 // import cetalks from '../assets/cetalks_execom.mp4'
 
@@ -14,6 +15,13 @@ const Projects = () => {
     
     // Sample project data
     const web = [
+        {
+            title: 'MuMent',
+            description: 'Mument\'s official project management tool',
+            image: mument,
+            link: 'https://mument.vercel.app/',
+            tools: ['vite', 'react', 'typescript', 'tailwindcss', 'django', 'postgresql']
+        },
         {
             title: 'Sargam 2025',
             description: 'Point table for CET\'s Official Cultural Fest',
