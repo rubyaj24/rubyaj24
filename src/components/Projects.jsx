@@ -19,7 +19,7 @@ const Projects = () => {
             title: 'MuMent',
             description: 'Mument\'s official project management tool',
             image: mument,
-            link: 'https://mument.vercel.app/',
+            link: 'https://mument-2025.vercel.app/',
             tools: ['vite', 'react', 'typescript', 'tailwindcss', 'django', 'postgresql']
         },
         {
