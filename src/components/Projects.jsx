@@ -8,6 +8,7 @@ import portfolio from '../assets/portfolio.png'
 import resume from '../assets/resume-builder.png'
 import earth from '../assets/threejs-earth.png'
 import mument from '../assets/mument.png'
+import certed from '../assets/certed.png'
 // import dotslash from '../assets/dotslash-22-promo.mp4'
 // import cetalks from '../assets/cetalks_execom.mp4'
 
@@ -31,20 +32,26 @@ const Projects = () => {
                 'vite','react','javascript','tailwindcss','sheetsAPI'
             ]
         },
-
-        {
-            title: 'MuSprint',
-            description: 'Leaderboard for MuLearn CET Karma Mining',
-            image: musprint,
-            link: 'https://musprint-cet.vercel.app/',
-            tools : ['react','typescript','vanillacss']
-        },
         {
             title: 'Drug Free Kerala',
             description: 'Auth taking page for Drug Free Kerala, part of permute-25',
             image: dfk,
             link: 'https://drugfreekerala.com/',
             tools : ['vite','react','typescript','tailwindcss']
+        },
+        {
+            title: 'Cert-Ed Academia',
+            description: 'Landing page for Cert-Ed Academia',
+            link: 'https://certedacademia.com/',
+            image: certed,
+            tools : ['wordpress','elementor']
+        },
+        {
+            title: 'MuSprint',
+            description: 'Leaderboard for MuLearn CET Karma Mining',
+            image: musprint,
+            link: 'https://musprint-cet.vercel.app/',
+            tools : ['react','typescript','vanillacss']
         },
         {
             title: 'Resume Builder',
