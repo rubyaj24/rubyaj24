@@ -1,4 +1,6 @@
+import React, { useState } from 'react'
 import { Card } from './ui/card'
+import ProjectModal from './ProjectModal'
 import sargam25 from '../assets/sargam-25.webm'
 import musprint from '../assets/musprint-cet.png'
 import dfk from '../assets/drug-free-kerala.png'
@@ -122,6 +124,11 @@ const Projects = () => {
     //     }
     // ]
 
+    const [selected, setSelected] = useState(null)
+
+    const open = (project) => setSelected(project)
+    const close = () => setSelected(null)
+
     return (
         <div className='w-full px-6 py-4'>
             <div className="flex items-center justify-center text-white/50 font-redhat">
@@ -138,34 +145,35 @@ const Projects = () => {
                                 animationFillMode: 'forwards'
                             }}
                         >
-                            <a href={project.link}>
-                            <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                            <p className="text-gray-400">{project.description}</p>
-                            {project.preview ? (
-                                <video 
-                                    src={project.preview}
-                                    className="w-full mt-4 rounded-lg"
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                />
-                            ) : <img src={project.image} alt={project.title} className="w-full mt-4 rounded-lg text-white" />}
-                            <div className="flex flex-wrap gap-2 mt-4">
-                                {project.tools.map((tool, i) => (
-                                    <span
-                                        key={i}
-                                        className="border-2 border-blue-500/20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-gray-200 px-2 py-1 rounded-lg text-xs"
-                                    >
-                                        {tool}
-                                    </span>
-                                ))}
-                            </div>
-                            </a>
+                            <button onClick={() => open(project)} className="text-left w-full">
+                              <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                              <p className="text-gray-400">{project.description}</p>
+                              {project.preview ? (
+                                  <video 
+                                      src={project.preview}
+                                      className="w-full mt-4 rounded-lg"
+                                      autoPlay
+                                      loop
+                                      muted
+                                      playsInline
+                                  />
+                              ) : <img src={project.image} alt={project.title} className="w-full mt-4 rounded-lg text-white" />}
+                              <div className="flex flex-wrap gap-2 mt-4">
+                                  {project.tools.map((tool, i) => (
+                                      <span
+                                          key={i}
+                                          className="border-2 border-blue-500/20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-gray-200 px-2 py-1 rounded-lg text-xs"
+                                      >
+                                          {tool}
+                                      </span>
+                                  ))}
+                              </div>
+                            </button>
                         </div>
                     ))}
                 </div>
             </Card>
+            {selected && <ProjectModal project={selected} onClose={close} />}
             {/* <div className="flex items-center justify-center text-white/50 font-redhat mt-6">
                 <h1 className="text-4xl font-bold">My Contributions - UI</h1>
             </div>

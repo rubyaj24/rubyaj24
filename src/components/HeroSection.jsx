@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, CardContent, CardFooter, CardTitle } from './ui/card'
+import NameSwitcher from './NameSwitcher'
 import '../styles/card.css'
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaBehance } from 'react-icons/fa';
 
@@ -22,9 +23,9 @@ return (
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-1 space-y-4">
-                    <CardTitle className="text-3xl font-bold text-white">
-                        Amaljith M V
-                    </CardTitle>
+                        <CardTitle className="text-3xl font-bold text-white">
+                            <NameSwitcher names={["Amaljith M V", "അമൽജിത് എം വി", "அமல்ஜித் எம் வி","अमलजीत एम वी","ಅಮಲಜಿತ್ ಎಂ ವಿ","అమల్‌జిత్ ఎమ్ వి"]} />
+                        </CardTitle>
                     <CardContent className="p-0 space-y-2">
                         <ul className="text-base text-zinc-200">
                             <li>Student</li>
