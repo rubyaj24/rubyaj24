@@ -1,6 +1,7 @@
 import { Card } from './ui/card'
 import sargam25 from '../assets/sargam-25.webm'
 import musprint from '../assets/musprint-cet.png'
+import pgbee from '../assets/pgbee.png'
 import dfk from '../assets/drug-free-kerala.png'
 import beyondhack from '../assets/beyondhack.mp4'
 import minmark from '../assets/min-mark.png'
@@ -16,13 +17,7 @@ const Projects = () => {
     
     // Sample project data
     const web = [
-        {
-            title: 'MuMent',
-            description: 'Mument\'s official project management tool',
-            image: mument,
-            link: 'https://mument-2025.vercel.app/',
-            tools: ['vite', 'react', 'typescript', 'tailwindcss', 'django', 'postgresql']
-        },
+        
         {
             title: 'Sargam 2025',
             description: 'Point table for CET\'s Official Cultural Fest',
@@ -38,6 +33,20 @@ const Projects = () => {
             image: dfk,
             link: 'https://drugfreekerala.com/',
             tools : ['vite','react','typescript','tailwindcss']
+        },
+        {
+            title: 'MuMent',
+            description: 'Mument\'s official project management tool',
+            image: mument,
+            link: 'https://mument-2025.vercel.app/',
+            tools: ['vite', 'react', 'typescript', 'tailwindcss', 'django', 'postgresql']
+        },
+        {
+            title: 'PgBee',
+            description: 'Online platform for college students to rent hostels and pgs.',
+            image: pgbee,
+            link: 'https://pgbee.in/',
+            tools: ['next', 'react', 'tailwindcss', 'nodejs', 'postgres']
         },
         {
             title: 'Cert-Ed Academia',
