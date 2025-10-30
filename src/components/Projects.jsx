@@ -10,6 +10,7 @@ import resume from '../assets/resume-builder.png'
 import earth from '../assets/threejs-earth.png'
 import mument from '../assets/mument.png'
 import certed from '../assets/certed.png'
+import mpmc from '../assets/mpmc.png'
 // import dotslash from '../assets/dotslash-22-promo.mp4'
 // import cetalks from '../assets/cetalks_execom.mp4'
 
@@ -21,7 +22,7 @@ const Projects = () => {
         {
             title: 'MPMC Emulator',
             description: 'Web-based emulator for MPMC architecture',
-            image: 'https://amaljithmv.github.io/mpmc-emulator/assets/preview.png',
+            image: mpmc,
             link: 'https://mpmc-emulator.vercel.app/',
             tools: ['vite','react','typescript','tailwindcss','redux']
         },
