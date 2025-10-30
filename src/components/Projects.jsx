@@ -17,7 +17,14 @@ const Projects = () => {
     
     // Sample project data
     const web = [
-        
+
+        {
+            title: 'MPMC Emulator',
+            description: 'Web-based emulator for MPMC architecture',
+            image: 'https://amaljithmv.github.io/mpmc-emulator/assets/preview.png',
+            link: 'https://mpmc-emulator.vercel.app/',
+            tools: ['vite','react','typescript','tailwindcss','redux']
+        },
         {
             title: 'Sargam 2025',
             description: 'Point table for CET\'s Official Cultural Fest',
