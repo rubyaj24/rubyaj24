@@ -11,6 +11,7 @@ import earth from '../assets/threejs-earth.png'
 import mument from '../assets/mument.png'
 import certed from '../assets/certed.png'
 import mpmc from '../assets/mpmc.png'
+import herakles from '../assets/herakles-cet.png'
 // import dotslash from '../assets/dotslash-22-promo.mp4'
 // import cetalks from '../assets/cetalks_execom.mp4'
 
@@ -20,11 +21,18 @@ const Projects = () => {
     const web = [
 
         {
+            title: 'Herakles CET',
+            description: 'Official Website for Herakles CET 2024',
+            image: herakles,
+            link: 'https://heraklesracing.cet.ac.in/',
+            tools: ['next','react','typescript','tailwindcss','framer-motion']
+        },
+        {
             title: 'MPMC Emulator',
             description: 'Web-based emulator for MPMC architecture',
             image: mpmc,
             link: 'https://mpmc-emulator.vercel.app/',
-            tools: ['vite','react','typescript','tailwindcss','redux']
+            tools: ['next','react','typescript','radix','zustand']
         },
         {
             title: 'Sargam 2025',
@@ -47,7 +55,7 @@ const Projects = () => {
             description: 'Mument\'s official project management tool',
             image: mument,
             link: 'https://mument-2025.vercel.app/',
-            tools: ['vite', 'react', 'typescript', 'tailwindcss', 'django', 'postgresql']
+            tools: ['next', 'react', 'typescript', 'tailwindcss', 'django', 'postgresql']
         },
         {
             title: 'PgBee',
