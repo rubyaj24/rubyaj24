@@ -11,7 +11,7 @@ import earth from '../assets/threejs-earth.png'
 import mument from '../assets/mument.png'
 import certed from '../assets/certed.png'
 import mpmc from '../assets/mpmc.png'
-import herakles from '../assets/herakles-cet.png'
+import herakles from '../assets/herakles.png'
 // import dotslash from '../assets/dotslash-22-promo.mp4'
 // import cetalks from '../assets/cetalks_execom.mp4'
 
