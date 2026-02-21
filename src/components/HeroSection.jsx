@@ -63,7 +63,7 @@ return (
             </div>
             <div className='flex flex-col items-center justify-center'>
             <img 
-                src='https://avatars.githubusercontent.com/rubyaj24' 
+                src='src\assets\main.jpeg' 
                 alt="Profile" 
                 className="rounded-full p-[2px] bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:p-0 hover:scale-105 transition-all duration-500 ease-in-out [background-size:200%_200%] animate-[gradient-rotate_3s_ease-in-out_infinite]" 
             />
