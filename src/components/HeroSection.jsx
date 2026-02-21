@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardContent, CardFooter, CardTitle } from './ui/card'
 import '../styles/card.css'
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaBehance } from 'react-icons/fa';
+import mainImage from '../assets/main.jpeg'
 
 const SocialLink = ({ href, icon: Icon, label }) => (
   <a 
@@ -63,7 +64,7 @@ return (
             </div>
             <div className='flex flex-col items-center justify-center'>
             <img 
-                src='src\assets\main.jpeg' 
+                src={mainImage}
                 alt="Profile" 
                 className="rounded-full p-[2px] bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:p-0 hover:scale-105 transition-all duration-500 ease-in-out [background-size:200%_200%] animate-[gradient-rotate_3s_ease-in-out_infinite]" 
             />
