@@ -1,11 +1,11 @@
-<table width="100%">
+<table>
   <tr>
-    <td width="30%" valign="center">
-      <img src="public/name.png" height="160" alt="Amaljith" />
-    </td>
-    <td width="70%" valign="center">
+    <td>
       <h1><samp>Hi 👋! I'm Amaljith</samp></h1>
       <p><samp>Frontend developer with a UI/UX edge.<br>I build at the intersection of design, product, and marketing.</samp></p>
+    </td>
+    <td>
+      <img src="public/name.png" height="160" alt="Amaljith" />
     </td>
   </tr>
 </table>
