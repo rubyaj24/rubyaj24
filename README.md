@@ -1,8 +1,8 @@
-<img src="public/name.png" alt="Amaljith" align="right" height="160" />
-
-<h1><samp>Hi 👋! I'm Amaljith</samp></h1>
-
-<p><samp>Frontend developer with a UI/UX edge.<br>I build at the intersection of design, product, and marketing.</samp></p>
+<div style="overflow: hidden;">
+  <img src="public/name.png" alt="Amaljith" align="right" height="160" />
+  <h1><samp>Hi 👋! I'm Amaljith</samp></h1>
+  <p><samp>Frontend developer with a UI/UX edge.<br>I build at the intersection of design, product, and marketing.</samp></p>
+</div>
 
 ###
 
