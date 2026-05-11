@@ -1,9 +1,9 @@
-<table>
+<table width="100%">
   <tr>
-    <td>
+    <td width="30%" valign="center">
       <img src="public/name.png" height="160" alt="Amaljith" />
     </td>
-    <td>
+    <td width="70%" valign="center">
       <h1><samp>Hi 👋! I'm Amaljith</samp></h1>
       <p><samp>Frontend developer with a UI/UX edge.<br>I build at the intersection of design, product, and marketing.</samp></p>
     </td>
