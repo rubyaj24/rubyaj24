@@ -1,14 +1,9 @@
-<table>
-  <tr>
-    <td>
-      <h1><samp>Hi 👋! I'm Amaljith</samp></h1>
-      <p><samp>Frontend developer with a UI/UX edge.<br>I build at the intersection of design, product, and marketing.</samp></p>
-    </td>
-    <td>
-      <img src="public/name.png" height="160" alt="Amaljith" />
-    </td>
-  </tr>
-</table>
+<img src="public/name.png" align="right" height="160" alt="Amaljith" />
+
+<h1><samp>Hi 👋! I'm Amaljith</samp></h1>
+<p><samp>Frontend developer with a UI/UX edge.<br>I build at the intersection of design, product, and marketing.</samp></p>
+
+<br clear="both">
 
 ###
 
