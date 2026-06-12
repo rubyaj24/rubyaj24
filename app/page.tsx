@@ -1,15 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, GithubIcon, LinkedinIcon, Mail, Plus, TwitterIcon } from "lucide-react";
 import { featuredProjects } from "@/lib/data/projects";
 import FeaturedProjectSection from "@/components/home/FeaturedProjectSection";
 import ProjectNav from "@/components/home/ProjectNav";
 import FloatingContactBadge from "@/components/home/FloatingContactBadge";
 import Footer from "@/components/shared/Footer";
 import ParallaxBg from "@/components/shared/ParallaxBg";
+import ExperienceTimeline from "@/components/home/ExperienceTimeline";
+
+const socialLinks = [
+  { icon: <TwitterIcon className="inline-block h-6 w-6" />, url: "https://twitter.com/amaljith" },
+  { icon: <LinkedinIcon className="inline-block h-6 w-6" />, url: "https://linkedin.com/in/amaljithmv2004" },
+  { icon: <GithubIcon className="inline-block h-6 w-6" />, url: "https://github.com/amaljith" },
+  { icon: <ArrowUpRight className="inline-block h-6 w-6" />, url: "https://behance.net/amaljithmv" },
+  { icon: <Mail className="inline-block h-6 w-6" />, url: "mailto:amaljithmvinod@gmail.com" },
+];
 
 const skills = [
   { label: "UI/UX Design", desc: "User research, wireframing, prototyping, visual design" },
@@ -57,6 +67,52 @@ function SectionHeading({ label, title }: { label: string; title: string }) {
   );
 }
 
+function AccordionItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <motion.div
+      layout
+      className="rounded-2xl border border-white/[0.04] bg-white/[0.01] transition-colors duration-300 hover:border-white/[0.08]"
+      style={{ borderColor: open ? "rgba(255,255,255,0.08)" : undefined }}
+    >
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex w-full cursor-pointer items-center justify-between px-6 py-5 text-left text-sm font-semibold"
+      >
+        {question}
+        <motion.span
+          animate={{ rotate: open ? 45 : 0 }}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
+          className="ml-6 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/[0.06] text-xs text-white/30 transition-colors duration-300"
+          style={{
+            borderColor: open ? "rgba(255,255,255,0.2)" : undefined,
+            color: open ? "rgba(255,255,255,0.6)" : undefined,
+          }}
+        >
+          <Plus className="h-4 w-4" />
+        </motion.span>
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div className="px-6 pb-6">
+              <p className="text-sm leading-relaxed text-white/40">{answer}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -75,7 +131,7 @@ export default function HomePage() {
               <FadeIn>
                 <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 md:p-9">
                   <p className="text-base leading-relaxed text-white/70 md:text-lg">
-                    I am Amaljith, a multi-disciplinary creator blending UI/UX design,
+                    I am <span className="font-serif italic text-white">Amaljith</span>, a multi-disciplinary creator blending UI/UX design,
                     frontend development, videography, and editing to build digital
                     experiences that feel fast, clear, and human.
                   </p>
@@ -84,6 +140,21 @@ export default function HomePage() {
                     the right visual language and interactions before building polished,
                     responsive interfaces. I care about both craft and performance.
                   </p>
+                </div>
+                <div className="flex flex-wrap gap-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 md:p-9 mt-6">
+                  {socialLinks.map((link, i) => (
+                    <motion.a
+                      key={i}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/50"
+                    whileHover={{ scale: 1.2, y: -2, color: "#ffffff" }}
+                    transition={{ type: "spring", stiffness: 400, damping: 12 }}
+                  >
+                    {link.icon}
+                  </motion.a>
+                  ))}
                 </div>
               </FadeIn>
               
@@ -191,9 +262,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <ProjectNav projects={featuredProjects} />
-        <FloatingContactBadge />
-
         {/* Services */}
         <section id="services" className="scroll-section relative flex min-h-screen items-center px-6 py-28">
           <div className="mx-auto w-full max-w-7xl">
@@ -217,7 +285,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        
+        {/* Experience */}
+        <section className="scroll-section relative flex min-h-screen items-center px-6 py-28">
+          <div className="mx-auto w-full max-w-7xl">
+            <SectionHeading label="Experience" title="Where I've Worked" />
+            <ExperienceTimeline />
+          </div>
+        </section>
 
         {/* FAQ */}
         <section className="scroll-section relative flex min-h-screen items-center px-6 py-28">
@@ -226,19 +300,7 @@ export default function HomePage() {
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <FadeIn key={faq.q} delay={i * 0.05}>
-                  <details className="group rounded-2xl border border-white/[0.04] bg-white/[0.01] transition-all duration-300 hover:border-white/[0.08] [&[open]]:border-white/[0.08]">
-                    <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-left text-sm font-semibold transition-colors">
-                      {faq.q}
-                      <span className="ml-6 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/[0.06] text-xs text-white/30 transition-all duration-300 group-open:rotate-45 group-open:border-white/20 group-open:text-white/60">
-                        +
-                      </span>
-                    </summary>
-                    <div className="px-6 pb-6">
-                      <p className="text-sm leading-relaxed text-white/40">
-                        {faq.a}
-                      </p>
-                    </div>
-                  </details>
+                  <AccordionItem question={faq.q} answer={faq.a} />
                 </FadeIn>
               ))}
             </div>
@@ -274,6 +336,9 @@ export default function HomePage() {
 
         <Footer />
       </div>
+
+      <ProjectNav projects={featuredProjects} />
+      <FloatingContactBadge />
     </>
   );
 }

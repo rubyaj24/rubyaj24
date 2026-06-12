@@ -7,7 +7,8 @@ export const projects: Project[] = [
     tagline: "Mument - Where curiosity meets action.",
     links: [
       { label: "Website", url: "https://mument.mulearn.org" },
-      { label: "Brand Guide", url: "https://play.google.com/store/apps/details?id=org.mulearn.mument" },
+      { label: "Brand Guide", url: "https://mulearn.org/mumentbrandguide" },
+      { label: "Blog Post", url: "https://www.linkedin.com/feed/update/urn:li:activity:7441133627993747456/" },
     ],
     category: "UI/UX & Frontend",
     duration: "4 months",
@@ -19,13 +20,10 @@ export const projects: Project[] = [
     overview:
       "A dashboard to track the learning progress of 1600+ learners across Kerala, with features for team management, project submissions, and real-time updates.",
     process: [
-      {
-        title: "Discovery & Brief",
-        description: "Understanding user needs and business goals",
-      },
+      { title: "Discovery & Brief", description: "Understood the needs of learners and organizers for a comprehensive dashboard",},
       {
         title: "Research & Requirements",
-        description: "Analyzed user feedback and competitor apps",
+        description: "Analyzed existing learning platforms and gathered feature requirements through user interviews",
       },
       {
         title: "Wireframing & IA",
@@ -41,7 +39,7 @@ export const projects: Project[] = [
       },
       {
         title: "Development",
-        description: "Built with Next.js, integrated AI recommendation engine",
+        description: "Built with Next.js, Backed with supabase",
       },
       {
         title: "Testing & Launch",
@@ -49,20 +47,20 @@ export const projects: Project[] = [
       },
     ],
     challenge: [
-      "Needed to balance new features with familiar UX",
-      "Integrating AI recommendations in a seamless way",
-      "Ensuring high performance with rich media content",
+      "Provide authentication and personalized dashboards for 1600+ learners",
+      "Design an engaging UI that motivates learners to track their progress",
+      "Integrate real-time updates for team registrations and project submissions",
     ],
     approach: [
-      "Iterative design process with user feedback loops",
-      "Designed recommendation UI that feels native to the experience",
-      "Optimized media loading and implemented smart caching",
+      "Implemented role-based access control for learners and organizers",
+      "Designed a gamified dashboard with progress bars, badges, and personalized sections",
+      "Used WebSockets for real-time updates on team registrations and project submissions",
     ],
     methodology: [
       {
         title: "User Research",
         description:
-          "Conducted interviews and surveys with 200+ users to identify pain points in the existing app and gather feature requests.",
+          "Conducted interviews and surveys with 100+ learners and organizers to identify pain points in the existing platform and gather feature requirements.",
       },
       {
         title: "UX Design",
@@ -77,6 +75,7 @@ export const projects: Project[] = [
     ],
     conclusion: "1600+ learners over kerala, 700+ teams registered, 100+ projects submitted.",
     gallery: [
+      "/images/mument-gallery-1.png",
       "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80",
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
     ],
@@ -94,8 +93,7 @@ export const projects: Project[] = [
     tags: ["UI/UX", "FRONTEND", "WEB DEV"],
     heroImage:
       "/images/sargam-banner.png",
-      heroVideo: "/videos/sargam-25.webm",
-    // TODO: replace with final asset - sargam event screenshot
+    heroVideo: "/videos/sargam-25.webm",
     overview:
       "Real-time point table and schedule tracker for CET's official cultural fest Sargam 2025. Built to handle live score updates across 20+ events.",
     process: [
@@ -166,9 +164,8 @@ export const projects: Project[] = [
     heroImage:
       "/images/herakles-banner.png",
     mockupImage: "/images/herakles-laptop-mockup.png",
-    // TODO: replace with final asset - herakles screenshot
     overview:
-      "The official website for Herakles CET's 2024 formula racing team. Designed to showcase the team's journey, sponsors, and technical achievements with a high-performance digital presence matching their on-track speed.",
+      "The official website for Herakles CET's 2024 baja racing team. Designed to showcase the team's journey, sponsors, and technical achievements with a high-performance digital presence matching their on-track speed.",
     process: [
       {
         title: "Discovery & Brief",
@@ -176,7 +173,7 @@ export const projects: Project[] = [
       },
       {
         title: "Research & Requirements",
-        description: "Analyzed competitor racing team sites",
+        description: "Analyzed popular racing team sites",
       },
       {
         title: "Competitor/Reference Analysis",
@@ -206,7 +203,7 @@ export const projects: Project[] = [
     challenge: [
       "Needed to balance sponsor visibility with technical content",
       "Required dynamic content updates during racing season",
-      "Performance-critical for international audience",
+      "Performance-critical for audience",
     ],
     approach: [
       "Designed modular sponsor sections with tier-based display",
@@ -232,7 +229,7 @@ export const projects: Project[] = [
       {
         title: "Development",
         description:
-          "Built with Next.js 14, TypeScript, and Tailwind CSS. Implemented Framer Motion for scroll-triggered animations and transitions.",
+          "Built with Vite, TypeScript, and Tailwind CSS. Implemented Framer Motion for scroll-triggered animations and transitions.",
       },
     ],
     conclusion:
@@ -248,26 +245,25 @@ export const projects: Project[] = [
     slug: "mpmc-emulator",
     title: "MPMC Emulator",
     tagline: "Microprocessor lab, reimagined for the browser.",
-    links: [],
+    links: [{ label: "GitHub Repo", url: "https://github.com/rubyaj24/mpmc_emulator" }, { label: "Live Site", url: "https://mpmc-emulator.vercel.app" }],
     category: "UI/UX & Frontend",
     duration: "2 months",
     date: "Jan 2024",
     location: "CET, Trivandrum",
     tags: ["FRONTEND", "WEB DEV"],
     heroImage:
-      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=1200&q=80",
+      "/images/mpmc-banner.png",
     mockupImage: "/images/mpmc-mockup.png",
-    // TODO: replace with final asset
     overview:
       "A web-based emulator for MPMC (Microprocessor & Microcontroller) architecture. Built to help students learn assembly programming without needing physical hardware kits.",
     process: [
       {
         title: "Discovery & Brief",
-        description: "Identified student pain points with lab hardware",
+        description: "Identified student pain points with lab hardware.",
       },
       {
         title: "Research & Requirements",
-        description: "Studied existing emulator solutions",
+        description: "Studied existing emulator solutions.",
       },
       {
         title: "Wireframing & IA",
@@ -316,8 +312,9 @@ export const projects: Project[] = [
     conclusion:
       "The emulator became the primary learning tool for 3rd-semester CS students, reducing dependency on physical lab kits and enabling remote learning.",
     gallery: [
-      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&q=80",
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+      "/images/mpmc-gallery-2.png",
+      "/images/mpmc-banner.png",
     ],
     color: "#0a1628",
   },
@@ -325,15 +322,15 @@ export const projects: Project[] = [
     slug: "pgbee",
     title: "PgBee",
     tagline: "Finding home, made simple for students.",
-    links: [],
+    links: [{ label: "Live Site", url: "https://pgbee.in" }],
     category: "UI/UX & Frontend",
     duration: "4 months",
     date: "Sep 2024",
     location: "Trivandrum",
     tags: ["UI/UX", "FRONTEND"],
     heroImage:
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=80",
-    // TODO: replace with final asset
+      "/images/pgbee-banner.png",
+    mockupImage: "/images/pgbee-mockup.png",
     overview:
       "An online platform connecting college students with verified PG accommodations and hostels. Simplifies the rental search with transparent listings and direct owner communication.",
     process: [
@@ -392,6 +389,7 @@ export const projects: Project[] = [
     gallery: [
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
+      "/images/pgbee-gallery-1.png",
     ],
     color: "#0a1a0a",
   },
@@ -399,7 +397,7 @@ export const projects: Project[] = [
     slug: "drug-free-kerala-campaign",
     title: "Drug-Free Kerala Campaign",
     tagline: "Designing for a healthier, drug-free future.",
-    links: [],
+    links: [{ label: "Live Site", url: "https://drugfreekerala.com" }],
     category: "UI/UX & Frontend",
     duration: "2 days",
     date: "Mar 2025",
