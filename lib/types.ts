@@ -7,6 +7,7 @@ export interface Project {
   slug: string;
   title: string;
   tagline: string;
+  links: { label: string; url: string }[];
   category: string;
   duration: string;
   date: string;
@@ -21,6 +22,6 @@ export interface Project {
   approach: string[];
   methodology: { title: string; description: string }[];
   conclusion: string;
-  gallery: string[];
+  gallery: (string | { src: string; type: "image" | "video" })[];
   color: string;
 }

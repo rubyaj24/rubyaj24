@@ -39,7 +39,7 @@ export default function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-[#0b042a]/80 backdrop-blur-xl border-b border-white/[0.04]"
+          ? "bg-bg/10 backdrop-blur-xl"
           : "bg-transparent"
       )}
     >
@@ -81,7 +81,7 @@ export default function Header() {
 
       <div
         className={cn(
-          "fixed inset-0 z-40 flex flex-col items-center justify-center gap-10 bg-[#0b042a] transition-all duration-500 md:hidden",
+          "fixed inset-0 z-40 flex flex-col items-center justify-center gap-10 bg-bg transition-all duration-500 md:hidden",
           open
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"

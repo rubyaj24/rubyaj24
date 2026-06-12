@@ -9,6 +9,7 @@ import FeaturedProjectSection from "@/components/home/FeaturedProjectSection";
 import ProjectNav from "@/components/home/ProjectNav";
 import FloatingContactBadge from "@/components/home/FloatingContactBadge";
 import Footer from "@/components/shared/Footer";
+import ParallaxBg from "@/components/shared/ParallaxBg";
 
 const skills = [
   { label: "UI/UX Design", desc: "User research, wireframing, prototyping, visual design" },
@@ -59,11 +60,11 @@ function SectionHeading({ label, title }: { label: string; title: string }) {
 export default function HomePage() {
   return (
     <>
-      <div className="bg-glow">
+      <ParallaxBg speed={0.15} className="bg-glow">
         <div className="bg-orb" />
         <div className="bg-orb" />
         <div className="bg-orb" />
-      </div>
+      </ParallaxBg>
 
       <div className="scroll-container">
         {/* About */}
@@ -112,32 +113,6 @@ export default function HomePage() {
             index={i}
           />
         ))}
-
-        <ProjectNav projects={featuredProjects} />
-        <FloatingContactBadge />
-
-        {/* Services */}
-        <section id="services" className="scroll-section relative flex min-h-screen items-center px-6 py-28">
-          <div className="mx-auto w-full max-w-7xl">
-            <SectionHeading label="What I Do" title="Services & Expertise" />
-            <div className="grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {skills.map((skill, i) => (
-                <FadeIn key={skill.label} delay={i * 0.06} className="h-full">
-                  <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.04] bg-white/[0.02] p-7 transition-all duration-500 hover:border-white/[0.1] hover:bg-white/[0.04]">
-                    <div className="absolute top-0 right-0 -mt-6 -mr-6 h-24 w-24 rounded-full bg-gradient-to-br from-purple-600/10 to-pink-600/5 blur-2xl transition-all duration-500 group-hover:from-purple-500/20 group-hover:to-pink-500/10" />
-                    <span className="relative mb-4 block text-3xl font-black text-white/[0.04]">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <h3 className="font-display relative mb-2 text-lg font-bold">{skill.label}</h3>
-                    <p className="relative text-sm leading-relaxed text-white/40">
-                      {skill.desc}
-                    </p>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Selected Work */}
         <section id="work" className="scroll-section relative flex min-h-screen items-center px-6 py-28">
@@ -215,6 +190,34 @@ export default function HomePage() {
             </FadeIn>
           </div>
         </section>
+
+        <ProjectNav projects={featuredProjects} />
+        <FloatingContactBadge />
+
+        {/* Services */}
+        <section id="services" className="scroll-section relative flex min-h-screen items-center px-6 py-28">
+          <div className="mx-auto w-full max-w-7xl">
+            <SectionHeading label="What I Do" title="Services & Expertise" />
+            <div className="grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {skills.map((skill, i) => (
+                <FadeIn key={skill.label} delay={i * 0.06} className="h-full">
+                  <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.04] bg-white/[0.02] p-7 transition-all duration-500 hover:border-white/[0.1] hover:bg-white/[0.04]">
+                    <div className="absolute top-0 right-0 -mt-6 -mr-6 h-24 w-24 rounded-full bg-gradient-to-br from-purple-600/10 to-pink-600/5 blur-2xl transition-all duration-500 group-hover:from-purple-500/20 group-hover:to-pink-500/10" />
+                    <span className="relative mb-4 block text-3xl font-black text-white/[0.04]">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="font-display relative mb-2 text-lg font-bold">{skill.label}</h3>
+                    <p className="relative text-sm leading-relaxed text-white/40">
+                      {skill.desc}
+                    </p>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        
 
         {/* FAQ */}
         <section className="scroll-section relative flex min-h-screen items-center px-6 py-28">

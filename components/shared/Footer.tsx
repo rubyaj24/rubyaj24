@@ -9,7 +9,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 px-6 py-12">
+    <footer className="border-t border-white/5 px-0 pt-12">
       <div className="mx-auto max-w-7xl items-center justify-between gap-8">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div id='about'>
@@ -35,8 +35,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-[20rem] font-display text-center text-white/50">
-        AMALJITH
+      <div className="md:text-[18rem] mx-0 px-0 text-7xl font-expanded text-center text-white/5">
+        AMALJITH.
       </div>
     </footer>
   );

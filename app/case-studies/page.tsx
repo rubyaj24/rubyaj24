@@ -4,7 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { projects, featuredProjects } from "@/lib/data/projects";
+import { projects } from "@/lib/data/projects";
+import Footer from "@/components/shared/Footer";
 
 const allCategories = [
   "All",
@@ -57,7 +58,7 @@ export default function CaseStudiesPage() {
         </div>
 
         {/* Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 pb-16">
           {filtered.map((project, i) => (
             <motion.div
               key={project.slug}
@@ -102,6 +103,7 @@ export default function CaseStudiesPage() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

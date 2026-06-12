@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Manrope, Instrument_Serif, Sora } from "next/font/google";
+import { Manrope, Instrument_Serif, Sora, Special_Gothic_Expanded_One } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
+import HashScrollHandler from "@/components/shared/HashScrollHandler";
 
 const fontSans = Manrope({
   subsets: ["latin"],
@@ -24,10 +25,18 @@ const fontSerif = Instrument_Serif({
   display: "swap",
 });
 
+const fontExpanded = Special_Gothic_Expanded_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-expanded",
+  display: "swap",
+  fallback: ["Arial", "sans-serif"],
+});
+
 export const metadata: Metadata = {
   title: "Amaljith M V — UI/UX Designer & Frontend Developer",
   description:
-    "Portfolio of Amaljith M V — a multi-disciplinary creator working across UI/UX design, frontend development, videography, and video editing.",
+    "Portfolio of Amaljith M V — a multi-disciplinary creator working across UI/UX design, Branding, Frontend development, videography, and video editing.",
 };
 
 export default function RootLayout({
@@ -36,9 +45,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`dark ${fontSans.variable} ${fontSerif.variable} ${fontDisplay.variable}`}>
+    <html lang="en" className={`dark ${fontSans.variable} ${fontSerif.variable} ${fontDisplay.variable} ${fontExpanded.variable}`}>
       <body className="antialiased font-sans">
         <Header />
+        <HashScrollHandler />
         <main className="relative z-10">{children}</main>
       </body>
     </html>

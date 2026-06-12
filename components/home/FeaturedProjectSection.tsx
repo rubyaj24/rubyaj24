@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import ParallaxBg from "@/components/shared/ParallaxBg";
 import type { Project } from "@/lib/types";
 
 interface Props {
@@ -23,13 +24,15 @@ export default function FeaturedProjectSection({ project, index }: Props) {
       className="scroll-section relative flex h-screen w-full items-center justify-center overflow-hidden"
       style={{ backgroundColor: project.color }}
     >
-      <div
-        className="absolute inset-0 bg-center bg-no-repeat opacity-35 pointer-events-none"
-        style={{
-          backgroundImage: `url(${featuredBackground})`,
-          backgroundSize: "min(72vw, 980px) auto",
-        }}
-      />
+      <ParallaxBg speed={0.3} className="absolute inset-0 pointer-events-none">
+        <div
+          className="h-full w-full bg-center bg-no-repeat opacity-35"
+          style={{
+            backgroundImage: `url(${featuredBackground})`,
+            backgroundSize: "min(72vw, 980px) auto",
+          }}
+        />
+      </ParallaxBg>
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/70 pointer-events-none" />
 
       <motion.span
