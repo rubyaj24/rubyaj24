@@ -21,7 +21,7 @@ export default function CaseStudiesPage() {
       : projects.filter((p) => p.tags.includes(activeCategory));
 
   return (
-    <div className="min-h-screen px-6 pt-28 pb-24">
+    <div className="min-h-screen px-6 pt-28">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
