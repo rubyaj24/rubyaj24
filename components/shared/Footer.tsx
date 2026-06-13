@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <Image src="/images/amaljith-long.png" alt="Footer logo" width={1200} height={600} className="pointer-events-none opacity-5 w-full mt-10" />
+      <Image src="/images/amaljith-lon.png" alt="Footer logo" width={1200} height={600} className="pointer-events-none opacity-5 w-full mt-10" />
     </footer>
   );
 }
