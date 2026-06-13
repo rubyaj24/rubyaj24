@@ -20,6 +20,8 @@ export default function Footer() {
             <p className="text-sm text-white/30">
               UI/UX Designer & Frontend Developer
             </p>
+            <Link href="https://score.motion.dev/site/amaljithmv.vercel.app"><img src="https://api.motion.dev/score/badge?url=amaljithmv.vercel.app" alt="MotionScore" className="mt-2" /></Link>
+
           </div>
           <div id="socials" className="flex gap-6">
             {socials.map((s) => (
