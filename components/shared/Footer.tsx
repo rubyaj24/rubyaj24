@@ -36,9 +36,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {/* <div className=" pointer-events-none lg:text-[18rem] md:text-[8rem] mx-0 px-0 text-7xl font-expanded text-center text-white/5">
-        AMALJITH.
-      </div> */}
       <Image src="/images/amaljith..png" alt="Footer logo" width={1200} height={600} className="pointer-events-none opacity-5 w-full mt-10" />
     </footer>
   );

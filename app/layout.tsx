@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Instrument_Serif, Sora, Special_Gothic_Expanded_One, Unbounded } from "next/font/google";
+import { Manrope, Instrument_Serif, Sora, Unbounded } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
 import HashScrollHandler from "@/components/shared/HashScrollHandler";
@@ -33,14 +33,6 @@ const fontSerif = Instrument_Serif({
   display: "swap",
 });
 
-const fontExpanded = Special_Gothic_Expanded_One({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-expanded",
-  display: "swap",
-  fallback: ["Arial", "sans-serif"],
-});
-
 export const metadata: Metadata = {
   title: "Amaljith M V — UI/UX Designer & Frontend Developer",
   description:
@@ -53,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`dark ${fontSans.variable} ${fontSerif.variable} ${fontDisplay.variable} ${fontExpanded.variable}`}>
+    <html lang="en" className={`dark ${fontSans.variable} ${fontSerif.variable} ${fontDisplay.variable}`}>
       <body className="antialiased font-sans">
         <InitialLoader />
         <Header />
