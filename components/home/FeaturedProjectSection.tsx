@@ -24,6 +24,23 @@ export default function FeaturedProjectSection({ project, index }: Props) {
       className="scroll-section relative flex h-screen w-full items-center justify-center overflow-hidden"
       style={{ backgroundColor: project.color }}
     >
+      <div className="absolute bottom-0 flex items-center overflow-hidden pointer-events-none select-none">
+        <motion.div
+          className="flex shrink-0"
+          animate={isInView ? { x: ["0%", "-50%"] } : { x: "0%" }}
+          transition={isInView ? { duration: 60, repeat: Infinity, ease: "anticipate" } : { duration: 0 }}
+        >
+          {Array.from({ length: 2 }).map((_, i) => (
+            <span
+              key={i}
+              className="shrink-0 whitespace-nowrap px-8 text-[clamp(6rem,18vw,16rem)] font-display leading-none tracking-tighter text-white/1.5"
+            >
+              {project.title}
+            </span>
+          ))}
+        </motion.div>
+      </div>
+
       <ParallaxBg speed={0.3} className="absolute inset-0 pointer-events-none">
         <div
           className="h-full w-full bg-center bg-no-repeat opacity-35"
@@ -33,6 +50,7 @@ export default function FeaturedProjectSection({ project, index }: Props) {
           }}
         />
       </ParallaxBg>
+
       <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/30 to-black/70 pointer-events-none" />
 
       <motion.span

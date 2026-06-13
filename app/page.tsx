@@ -10,16 +10,18 @@ import FeaturedProjectSection from "@/components/home/FeaturedProjectSection";
 import ProjectNav from "@/components/home/ProjectNav";
 import FloatingContactBadge from "@/components/home/FloatingContactBadge";
 import ScrollToTop from "@/components/home/ScrollToTop";
+import ScrollDownCTA from "@/components/home/ScrollDownCTA";
 import Footer from "@/components/shared/Footer";
 import ParallaxBg from "@/components/shared/ParallaxBg";
+import GradualBlur from "@/components/shared/GradualBlur";
 import ExperienceTimeline from "@/components/home/ExperienceTimeline";
 
 const socialLinks = [
-  { icon: <TwitterIcon className="inline-block h-6 w-6" />, url: "https://twitter.com/amaljith" },
-  { icon: <LinkedinIcon className="inline-block h-6 w-6" />, url: "https://linkedin.com/in/amaljithmv2004" },
-  { icon: <GithubIcon className="inline-block h-6 w-6" />, url: "https://github.com/amaljith" },
-  { icon: <ArrowUpRight className="inline-block h-6 w-6" />, url: "https://behance.net/amaljithmv" },
-  { icon: <Mail className="inline-block h-6 w-6" />, url: "mailto:amaljithmvinod@gmail.com" },
+  { icon: <TwitterIcon className="inline-block h-6 w-6" />, url: "https://twitter.com/amaljith", label: "Twitter" },
+  { icon: <LinkedinIcon className="inline-block h-6 w-6" />, url: "https://linkedin.com/in/amaljithmv2004", label: "LinkedIn" },
+  { icon: <GithubIcon className="inline-block h-6 w-6" />, url: "https://github.com/amaljith", label: "GitHub" },
+  { icon: <ArrowUpRight className="inline-block h-6 w-6" />, url: "https://behance.net/amaljithmv", label: "Behance" },
+  { icon: <Mail className="inline-block h-6 w-6" />, url: "mailto:amaljithmvinod@gmail.com", label: "Email" },
 ];
 
 const skills = [
@@ -100,8 +102,8 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
             key="content"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            exit={{ height: 0, opacity: 0, transitionDuration: 0.1 }}
+            transition={{ duration: 0.1, ease: "easeInOut" }}
             className="overflow-hidden"
           >
             <div className="px-6 pb-6">
@@ -149,12 +151,15 @@ export default function HomePage() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white/50 rounded-full border border-white/6 bg-white/2 p-2 md:p-9 "
-                    whileHover={{ scale: 1.2, y: -2, color: "#ffffff" }}
-                    transition={{ type: "spring", stiffness: 400, damping: 12 }}
-                  >
-                    {link.icon}
-                  </motion.a>
+                      className="group relative flex items-center rounded-full border border-white/6 bg-white/2 p-2 md:p-9 text-white/50 transition-colors duration-300 hover:text-white"
+                      whileHover={{ y: -2, transition: { duration: 0.5, ease: "anticipate" } }}
+                      // transition={{ type: "spring", stiffness: 400, damping: 12 }}
+                    >
+                      <span className="shrink-0">{link.icon}</span>
+                      <span className="max-w-0 overflow-hidden text-sm font-sans text-white/70 transition-all duration-300 group-hover:max-w-32 group-hover:ml-4">
+                        {link.label}
+                      </span>
+                    </motion.a>
                   ))}
                 </div>
               </FadeIn>
@@ -337,9 +342,13 @@ export default function HomePage() {
 
         <Footer />
       </div>
+      <div className="fixed bottom-0 left-0 right-0 h-32 pointer-events-none z-20">
+        <GradualBlur position="bottom" target="parent" height="8rem" strength={5} divCount={10} curve="bezier" opacity={0.5} />
+      </div>
 
       <ProjectNav projects={featuredProjects} />
       <FloatingContactBadge />
+      <ScrollDownCTA />
       <ScrollToTop />
     </>
   );

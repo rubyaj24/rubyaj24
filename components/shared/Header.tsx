@@ -46,6 +46,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <Link
           href="/"
+          data-loader-target
           className="relative inline-flex items-center"
         >
           <Image

@@ -59,7 +59,7 @@ function MethodCard({
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
       >
-        <div className="group w-auto rounded-xl border border-white/[0.04] bg-white/[0.02] p-5 transition-all duration-300 hover:border-white/[0.1]">
+        <div className="group w-auto p-5 transition-all duration-300">
           <div className="mb-3 flex items-center gap-2">
             {IconForMethod(item.title)}
             <span className="text-[10px] font-medium uppercase tracking-widest text-white/15">
