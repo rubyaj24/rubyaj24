@@ -33,7 +33,7 @@ export default function FeaturedProjectSection({ project, index }: Props) {
           }}
         />
       </ParallaxBg>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/70 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/30 to-black/70 pointer-events-none" />
 
       <motion.span
         initial={{ opacity: 0, scale: 0.8 }}
@@ -85,9 +85,9 @@ export default function FeaturedProjectSection({ project, index }: Props) {
           >
             <Link
               href={`/case-studies/${project.slug}`}
-              className="group relative inline-flex items-center gap-3 rounded-full border border-white/[0.15] px-7 py-3.5 text-sm font-semibold tracking-wide text-white/80 transition-all duration-300 hover:border-white/30 hover:text-white"
+              className="group relative inline-flex items-center gap-3 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold tracking-wide text-white/80 transition-all duration-300 hover:border-white/30 hover:text-white"
             >
-              <span className="absolute inset-0 rounded-full bg-white/[0.02] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <span className="absolute inset-0 rounded-full bg-white/2 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <span className="relative">VIEW CASE STUDY</span>
               <ArrowUpRight className="relative h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
@@ -97,12 +97,32 @@ export default function FeaturedProjectSection({ project, index }: Props) {
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.8, delay: 0.7 }}
+        animate={
+          isInView
+            ? {
+                opacity: [0, 1, 0, 1, 0, 1, 0.85],
+                textShadow: [
+                  "0 0 0px rgba(255,255,255,0)",
+                  "0 0 30px rgba(255,255,255,0.6)",
+                  "0 0 0px rgba(255,255,255,0)",
+                  "0 0 25px rgba(255,255,255,0.5)",
+                  "0 0 0px rgba(255,255,255,0)",
+                  "0 0 15px rgba(255,255,255,0.3)",
+                  "0 0 0px rgba(255,255,255,0)",
+                ],
+              }
+            : { opacity: 0 }
+        }
+        transition={{
+          duration: 1.2,
+          delay: 0.7,
+          times: [0, 0.15, 0.25, 0.4, 0.5, 0.65, 1],
+          ease: "easeInOut",
+        }}
         className="absolute bottom-10 left-0 right-0 mx-auto max-w-7xl px-8 md:px-12"
       >
         <div className="flex flex-wrap items-center gap-3 md:flex-nowrap md:gap-4">
-          <div className="hidden h-px flex-1 bg-white/[0.06] md:block" />
+          <div className="hidden h-px flex-1 bg-white/6 md:block" />
           <span className="text-xs font-medium tracking-wider text-white/30 uppercase">
             {project.category}
           </span>
@@ -110,7 +130,7 @@ export default function FeaturedProjectSection({ project, index }: Props) {
             {project.tags.slice(0, 2).map((t) => (
               <span
                 key={t}
-                className="rounded-full border border-white/[0.06] px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-widest text-white/25"
+                className="rounded-full border border-white/6 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-widest text-white/25"
               >
                 {t}
               </span>

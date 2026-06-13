@@ -27,7 +27,7 @@ const experiences = [
   },
   {
     role: "Technical Coordinator",
-    company: "CET, Trivandrum",
+    company: "Sargam'25 (CET Cultural Fest)",
     date: "2024 — 2025",
     description:
       "Coordinated design and tech for Sargam 2025 — CET's official cultural fest. Built the live event tracking platform.",
@@ -38,6 +38,13 @@ const experiences = [
     date: "Summer 2023",
     description:
       "Crafted DCE-GFR, a web app for guest faculty recruitment, improving accessibility and user experience.",
+  },
+  {
+    role: "Creative Head",
+    company: "CETalks",
+    date: "2024-present",
+    description:
+      "Led creative direction and design for CETalks, a student-run TEDx club. Designed event branding and promotional materials.",
   },
   {
     role: "B.Tech in Computer Science",

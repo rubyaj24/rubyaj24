@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Layers, Search, PenTool, Code, TestTube } from "lucide-react";
 import type { Project } from "@/lib/types";
 

@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="md:text-[18rem] mx-0 px-0 text-7xl font-expanded text-center text-white/5">
+      <div className=" pointer-events-none lg:text-[18rem] md:text-[8rem] mx-0 px-0 text-7xl font-expanded text-center text-white/5">
         AMALJITH.
       </div>
     </footer>

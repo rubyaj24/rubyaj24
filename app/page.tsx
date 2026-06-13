@@ -9,6 +9,7 @@ import { featuredProjects } from "@/lib/data/projects";
 import FeaturedProjectSection from "@/components/home/FeaturedProjectSection";
 import ProjectNav from "@/components/home/ProjectNav";
 import FloatingContactBadge from "@/components/home/FloatingContactBadge";
+import ScrollToTop from "@/components/home/ScrollToTop";
 import Footer from "@/components/shared/Footer";
 import ParallaxBg from "@/components/shared/ParallaxBg";
 import ExperienceTimeline from "@/components/home/ExperienceTimeline";
@@ -59,9 +60,9 @@ function SectionHeading({ label, title }: { label: string; title: string }) {
           <span className="inline-block h-px w-6 bg-white/20" />
           {label}
         </span>
-        <h2 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-5xl">
+        <h1 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-5xl">
           {title}
-        </h2>
+        </h1>
       </div>
     </FadeIn>
   );
@@ -129,7 +130,7 @@ export default function HomePage() {
             <SectionHeading label="About Me" title="Designer, Developer, Storyteller" />
             <div className="grid gap-8 md:grid-cols-[1.3fr_1fr] md:items-start">
               <FadeIn>
-                <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 md:p-9">
+                <div className="rounded-2xl border border-white/6 bg-white/2 p-7 md:p-9">
                   <p className="text-base leading-relaxed text-white/70 md:text-lg">
                     I am <span className="font-serif italic text-white">Amaljith</span>, a multi-disciplinary creator blending UI/UX design,
                     frontend development, videography, and editing to build digital
@@ -141,14 +142,14 @@ export default function HomePage() {
                     responsive interfaces. I care about both craft and performance.
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 md:p-9 mt-6">
+                <div className="flex flex-wrap gap-6 mt-6">
                   {socialLinks.map((link, i) => (
                     <motion.a
                       key={i}
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white/50"
+                      className="text-white/50 rounded-full border border-white/6 bg-white/2 p-2 md:p-9 "
                     whileHover={{ scale: 1.2, y: -2, color: "#ffffff" }}
                     transition={{ type: "spring", stiffness: 400, damping: 12 }}
                   >
@@ -160,7 +161,7 @@ export default function HomePage() {
               
               <div className="grid gap-5">
                 <FadeIn delay={0.08}>
-                  <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02]">
+                  <div className="overflow-hidden rounded-2xl border border-white/8 bg-white/2">
                     <Image
                       src="/images/amaljith.png"
                       alt="Portrait of Amaljith"
@@ -339,6 +340,7 @@ export default function HomePage() {
 
       <ProjectNav projects={featuredProjects} />
       <FloatingContactBadge />
+      <ScrollToTop />
     </>
   );
 }

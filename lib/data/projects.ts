@@ -327,12 +327,12 @@ export const projects: Project[] = [
     duration: "4 months",
     date: "Sep 2024",
     location: "Trivandrum",
-    tags: ["UI/UX", "FRONTEND"],
+    tags: ["UI/UX", "FRONTEND", "BRANDING"],
     heroImage:
       "/images/pgbee-banner.png",
     mockupImage: "/images/pgbee-mockup.png",
     overview:
-      "An online platform connecting college students with verified PG accommodations and hostels. Simplifies the rental search with transparent listings and direct owner communication.",
+      "It started as a hostel inder. Now, PgBee is a student housing platform that connects students with verified property owners in Trivandrum. It features a search-first experience, owner verification, and a simple dashboard for property management.",
     process: [
       {
         title: "Discovery & Brief",
@@ -391,7 +391,7 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
       "/images/pgbee-gallery-1.png",
     ],
-    color: "#0a1a0a",
+    color: "#FFE536",
   },
   {
     slug: "drug-free-kerala-campaign",
@@ -406,7 +406,7 @@ export const projects: Project[] = [
     heroImage: "/images/drug-free-kerala.png",
     mockupImage: "/images/dfk-mockup.png",
     overview:
-      "A digital campaign for Kerala's state initiative to raise awareness about drug abuse and promote rehabilitation resources. Included an informational website and social media assets.",
+      "A digital campaign for Kerala's state initiative to raise awareness about drug abuse and promote rehabilitation resources. Launched at Permute'25, Having over 5000+ pledges",
     process: [
       {
         title: "Discovery & Brief",
@@ -451,7 +451,7 @@ export const projects: Project[] = [
       },
     ],
     conclusion:
-      "The campaign website received 10,000+ visits in the first month, with positive feedback from users and NGOs. Social media assets were widely shared, increasing awareness.",
+      "The campaign website and social media assets reached thousands of users, providing critical information and resources to those affected by drug abuse, and received positive feedback from NGOs and the public.",
     gallery: [
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
     ],
