@@ -16,7 +16,7 @@ export const projects: Project[] = [
     location: "Remote",
     tags: ["UI/UX", "FRONTEND", "WEB DEV","BRANDING"],
     heroImage: "/images/mument-banner.png",
-    mockupImage: "/images/mument-mockup.png",
+    mockupImage: "/images/mument-mockup.webp",
     overview:
       "A dashboard to track the learning progress of 1600+ learners across Kerala, with features for team management, project submissions, and real-time updates.",
     process: [
@@ -76,8 +76,8 @@ export const projects: Project[] = [
     conclusion: "1600+ learners over kerala, 700+ teams registered, 100+ projects submitted.",
     gallery: [
       "/images/mument-gallery-1.png",
-      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80",
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+      "/images/mument-gallery-3.png",
+      "/images/mument-gallery-2.png",
     ],
     color: "#1558B6",
   },
@@ -163,7 +163,7 @@ export const projects: Project[] = [
     tags: ["UI/UX", "FRONTEND", "WEB DEV"],
     heroImage:
       "/images/herakles-banner.png",
-    mockupImage: "/images/herakles-laptop-mockup.png",
+    mockupImage: "/images/herakles-mockup.webp",
     overview:
       "The official website for Herakles CET's 2024 baja racing team. Designed to showcase the team's journey, sponsors, and technical achievements with a high-performance digital presence matching their on-track speed.",
     process: [
@@ -253,7 +253,7 @@ export const projects: Project[] = [
     tags: ["FRONTEND", "WEB DEV"],
     heroImage:
       "/images/mpmc-banner.png",
-    mockupImage: "/images/mpmc-mockup.png",
+    mockupImage: "/images/mpmc-mockup.webp",
     overview:
       "A web-based emulator for MPMC (Microprocessor & Microcontroller) architecture. Built to help students learn assembly programming without needing physical hardware kits.",
     process: [
@@ -330,7 +330,7 @@ export const projects: Project[] = [
     tags: ["UI/UX", "FRONTEND", "BRANDING"],
     heroImage:
       "/images/pgbee-banner.png",
-    mockupImage: "/images/pgbee-mockup.png",
+    mockupImage: "/images/pgbee-mockup.webp",
     overview:
       "It started as a hostel inder. Now, PgBee is a student housing platform that connects students with verified property owners in Trivandrum. It features a search-first experience, owner verification, and a simple dashboard for property management.",
     process: [
@@ -404,7 +404,7 @@ export const projects: Project[] = [
     location: "Kerala",
     tags: ["FRONTEND", "WEB DEV"],
     heroImage: "/images/drug-free-kerala.png",
-    mockupImage: "/images/dfk-mockup.png",
+    mockupImage: "/images/dfk-mockup.webp",
     overview:
       "A digital campaign for Kerala's state initiative to raise awareness about drug abuse and promote rehabilitation resources. Launched at Permute'25, Having over 5000+ pledges",
     process: [
@@ -457,6 +457,67 @@ export const projects: Project[] = [
     ],
     color: "#327161",
   },
+  {
+    slug: "ktu-tui",
+    title: "KTU TUI",
+    tagline: "An analysis on KTU's digital ecosystem and a terminal-based solution for students.",
+    links: [{ label: "GitHub Repo", url: "https://github.com/rubyaj24/ktu_tui" }],
+    category: "PYTHON, TUI",
+    duration: "1 month",
+    date: "Jun 2026",
+    location: "Kerala",
+    tags: ["PYTHON", "TUI"],
+    heroImage: "/images/ktu-tui.png",
+    overview:
+      "This project was an analysis of KTU's digital ecosystem and the development of a terminal-based solution for students to access academic information. It aimed to address the challenges posed by KTU's legacy systems, which were slow and not user-friendly.",
+    process: [
+      {
+        title: "Discovery & Brief",
+        description: "Identified KTU uses legacy systems that are slow and not user-friendly, causing frustration among students.",
+      },
+      {
+        title: "Research & Requirements",
+        description: "Studied KTU's existing systems and student pain points.",
+      },
+      {
+        title: "Development",
+        description: "Built a Python backend to scrape KTU data and a python-based terminal UI for students.",
+      },
+      {
+        title: "Testing & Launch",
+        description: "Tested with 20+ students for usability and accuracy before open-sourcing on GitHub.",
+      },
+    ],
+    challenge: [
+      "KTU's existing systems were slow and not user-friendly",
+      "Needed to scrape data without official APIs",
+      "Had to ensure the tool was lightweight and easy to use",
+    ],
+    approach: [
+      "Analyzed KTU's digital infrastructure and identified key data points to scrape",
+      "Built a Python scraper to extract data from KTU's portals",
+      "Designed a simple terminal UI for quick access to information",
+    ],
+    methodology: [
+      {
+        title: "Research",
+        description:
+          "Analyzed KTU's digital infrastructure and gathered feedback from students on their pain points with accessing academic information.",
+      },
+      {
+        title: "Development",
+        description:
+          "Implemented a Python-based scraper to extract necessary data, and built a terminal UI using curses for quick access. Developed a jQuery frontend for those preferring a web interface.",
+      },
+    ],
+    conclusion:
+      "It is good to maintain legacy systems, but there should have better pipeline to get access in latest browsers. This project was tto understand the KTU's digital ecosystem and to provide a better solution for students to access their academic information.",
+    gallery: [
+      "/images/ktu-tui-gallery-2.png",
+      "/images/ktu-tui.png",
+    ],
+    color: "#0a1628",
+  }
 ];
 
 export const featuredProjects = projects.slice(0, 3);
