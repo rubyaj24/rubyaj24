@@ -12,11 +12,11 @@ export const projects: Project[] = [
     ],
     category: "UI/UX & Frontend",
     duration: "4 months",
-    date: "Jul 2024",
+    date: "Feb 2026",
     location: "Remote",
     tags: ["UI/UX", "FRONTEND", "WEB DEV","BRANDING"],
     heroImage: "/images/mument-banner.png",
-    mockupImage: "/images/mument-mockup.webp",
+    mockupImage: "/images/mument-mockup.png",
     overview:
       "A dashboard to track the learning progress of 1600+ learners across Kerala, with features for team management, project submissions, and real-time updates.",
     process: [
@@ -70,13 +70,16 @@ export const projects: Project[] = [
       {
         title: "Development",
         description:
-          "Built with Next.js for server-side rendering, integrated a custom AI recommendation engine, and used Tailwind CSS for rapid styling.",
+          "Built with Next.js for server-side rendering, Tailwind CSS for styling, and Supabase for backend services. Implemented WebSockets for real-time updates and optimized performance for a large user base.",
       },
     ],
     conclusion: "1600+ learners over kerala, 700+ teams registered, 100+ projects submitted.",
     gallery: [
       "/images/mument-gallery-1.png",
       "/images/mument-gallery-3.png",
+      "/images/mument-gallery-4.png",
+      "/images/mument-gallery-5.png",
+      "/images/mument-gallery-6.png",
       "/images/mument-gallery-2.png",
     ],
     color: "#1558B6",
@@ -149,7 +152,7 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80",
       { src: "/videos/sargam-25.webm", type: "video" },
     ],
-    color: "#1a0a2e",
+    color: "#6F0404",
   },
   {
     slug: "herakles-racing-cet",
@@ -158,7 +161,7 @@ export const projects: Project[] = [
     links: [{ label: "Live Site", url: "https://heraklesracing.cet.ac.in" }],
     category: "UI/UX & Frontend",
     duration: "3 months",
-    date: "Aug 2024",
+    date: "Aug 2025",
     location: "CET, Trivandrum",
     tags: ["UI/UX", "FRONTEND", "WEB DEV"],
     heroImage:
@@ -248,7 +251,7 @@ export const projects: Project[] = [
     links: [{ label: "GitHub Repo", url: "https://github.com/rubyaj24/mpmc_emulator" }, { label: "Live Site", url: "https://mpmc-emulator.vercel.app" }],
     category: "UI/UX & Frontend",
     duration: "2 months",
-    date: "Jan 2024",
+    date: "Dec 2025",
     location: "CET, Trivandrum",
     tags: ["FRONTEND", "WEB DEV"],
     heroImage:
@@ -453,14 +456,16 @@ export const projects: Project[] = [
     conclusion:
       "The campaign website and social media assets reached thousands of users, providing critical information and resources to those affected by drug abuse, and received positive feedback from NGOs and the public.",
     gallery: [
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+      "/images/dfk-gallery-1.png",
+      "/images/dfk-gallery-3.png",
+      "/images/dfk-gallery-2.png",
     ],
     color: "#327161",
   },
   {
     slug: "ktu-tui",
     title: "KTU TUI",
-    tagline: "An analysis on KTU's digital ecosystem and a terminal-based solution for students.",
+    tagline: "An analysis on KTU's digital ecosystem, for students.",
     links: [{ label: "GitHub Repo", url: "https://github.com/rubyaj24/ktu_tui" }],
     category: "PYTHON, TUI",
     duration: "1 month",
@@ -512,12 +517,99 @@ export const projects: Project[] = [
     ],
     conclusion:
       "It is good to maintain legacy systems, but there should have better pipeline to get access in latest browsers. This project was tto understand the KTU's digital ecosystem and to provide a better solution for students to access their academic information.",
-    gallery: [
-      "/images/ktu-tui-gallery-2.png",
-      "/images/ktu-tui.png",
-    ],
+    gallery: [],
     color: "#0a1628",
-  }
+  },
+  {
+    slug: "aroha-builders",
+    title: "Aroha Builders",
+    tagline: "Crafting digital identities for construction excellence.",
+    links: [{ label: "Live Site", url: "https://arohabuilders.in" }],
+    category: "UI/UX & Frontend",
+    duration: "1 month",
+    date: "Feb 2026",
+    location: "Trivandrum",
+    tags: ["UI/UX", "FRONTEND", "BRANDING"],
+    heroImage:
+      "/images/aroha-gallery-1.png",
+    mockupImage: "/images/aroha-mockup.webp",
+    overview:
+      "A website for Aroha Builders, a construction company in Kerala. The site features a modern design, project portfolio, and contact information to establish a strong online presence.",
+    process: [
+      {
+        title: "Discovery & Brief",
+        description: "Understanding the client's needs and goals for the website.",
+      },
+      {
+        title: "Research & Requirements",
+        description: "Analyzed competitors and gathered requirements for the site.",
+      },
+      {
+        title: "Wireframing & IA",
+        description: "Designed the information architecture and wireframes for the site.",
+      },
+      {
+        title: "Visual Design",
+        description: "Created a modern, professional design aesthetic.",
+      },
+      {
+        title: "Development",
+        description: "Built the site using Next.js and Tailwind CSS.",
+      },
+      {
+        title: "Testing & Launch",
+        description: "Tested the site for usability and performance before launching.",
+      },
+    ],
+    challenge: [
+      "Needed to create a strong online presence for a traditional industry",
+      "Required a modern design that still felt professional",
+      "Had to showcase project portfolio effectively",
+    ],
+    approach: [
+      "Designed a clean, modern layout with strong typography and imagery",
+      "Focused on showcasing completed projects with case studies and galleries",
+      "Implemented a responsive design for accessibility across devices",
+    ],
+    methodology: [
+      {
+        title: "Research",
+        description:
+          "Analyzed the digital presence of construction companies in Kerala to identify design trends and opportunities for differentiation.",
+      },
+      {
+        title: "Design",
+        description:
+          "Created a modern, professional design with a focus on showcasing the company's project portfolio through case studies and galleries.",
+      },
+      {
+        title: "Development",
+        description:
+          "Built the website using Next.js for performance and Tailwind CSS for rapid styling. Implemented responsive design principles to ensure accessibility across devices.",
+      },
+    ],
+    conclusion:
+      "The new website successfully established Aroha Builders' online presence, effectively showcasing their project portfolio and attracting new clients in a competitive market.",
+    gallery: [
+      "/images/aroha-gallery-1.png",
+      "/images/aroha-gallery-2.png",
+      "/images/aroha-gallery-3.png",
+    ],
+    color: "#E8DBC9",
+  },
 ];
 
+const monthOrder: Record<string, number> = {
+  Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+  Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+};
+
+function parseDate(date: string): number {
+  const [m, y] = date.split(" ");
+  return parseInt(y) * 12 + (monthOrder[m] ?? 0);
+}
+
+const sorted = [...projects].sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
 export const featuredProjects = projects.slice(0, 3);
+export const recentProjects = sorted.slice(0, 3);

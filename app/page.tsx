@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, GithubIcon, LinkedinIcon, Mail, Plus, TwitterIcon } from "lucide-react";
-import { featuredProjects } from "@/lib/data/projects";
+import { featuredProjects, recentProjects } from "@/lib/data/projects";
 import FeaturedProjectSection from "@/components/home/FeaturedProjectSection";
 import ProjectNav from "@/components/home/ProjectNav";
 import FloatingContactBadge from "@/components/home/FloatingContactBadge";
@@ -76,7 +76,7 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
   return (
     <motion.div
       layout
-      className="rounded-2xl border border-white/[0.04] bg-white/[0.01] transition-colors duration-300 hover:border-white/[0.08]"
+      className="rounded-2xl border border-white/4 bg-white/1 transition-colors duration-300 hover:border-white/8"
       style={{ borderColor: open ? "rgba(255,255,255,0.08)" : undefined }}
     >
       <button
@@ -87,7 +87,7 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
-          className="ml-6 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/[0.06] text-xs text-white/30 transition-colors duration-300"
+          className="ml-6 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/6 text-xs text-white/30 transition-colors duration-300"
           style={{
             borderColor: open ? "rgba(255,255,255,0.2)" : undefined,
             color: open ? "rgba(255,255,255,0.6)" : undefined,
@@ -152,7 +152,7 @@ export default function HomePage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group relative flex items-center rounded-full border border-white/6 bg-white/2 p-2 md:p-9 text-white/50 transition-colors duration-300 hover:text-white"
-                      whileHover={{ y: -2, transition: { duration: 0.5, ease: "anticipate" } }}
+                      whileHover={{ transition: { duration: 0.5, ease: "anticipate" } }}
                       // transition={{ type: "spring", stiffness: 400, damping: 12 }}
                     >
                       <span className="shrink-0">{link.icon}</span>
@@ -215,19 +215,19 @@ export default function HomePage() {
               </div>
             </FadeIn>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {featuredProjects.map((project, i) => (
+              {recentProjects.map((project, i) => (
                 <FadeIn key={project.slug} delay={i * 0.08} className="h-full">
                   <Link
                     href={`/case-studies/${project.slug}`}
-                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.04] bg-white/[0.02] transition-all duration-500 hover:border-white/[0.1] hover:-translate-y-1"
+                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/4 bg-white/2 transition-all duration-500 hover:border-white/10 hover:-translate-y-1"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-4/3 overflow-hidden">
                       <img
                         src={project.heroImage}
                         alt={project.title}
                         className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-500 group-hover:opacity-100">
                         <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/30 bg-white/10 backdrop-blur-sm transition-all duration-500 group-hover:scale-110">
                           <ArrowUpRight className="h-5 w-5 text-white" />
@@ -239,7 +239,7 @@ export default function HomePage() {
                         {project.tags.slice(0, 2).map((tag) => (
                           <span
                             key={tag}
-                            className="rounded-full border border-white/[0.06] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.15em] text-white/35"
+                            className="rounded-full border border-white/6 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.15em] text-white/35"
                           >
                             {tag}
                           </span>
@@ -275,9 +275,9 @@ export default function HomePage() {
             <div className="grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {skills.map((skill, i) => (
                 <FadeIn key={skill.label} delay={i * 0.06} className="h-full">
-                  <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.04] bg-white/[0.02] p-7 transition-all duration-500 hover:border-white/[0.1] hover:bg-white/[0.04]">
-                    <div className="absolute top-0 right-0 -mt-6 -mr-6 h-24 w-24 rounded-full bg-gradient-to-br from-purple-600/10 to-pink-600/5 blur-2xl transition-all duration-500 group-hover:from-purple-500/20 group-hover:to-pink-500/10" />
-                    <span className="relative mb-4 block text-3xl font-black text-white/[0.04]">
+                  <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/4 bg-white/2 p-7 transition-all duration-500 hover:border-white/10 hover:bg-white/4">
+                    <div className="absolute top-0 right-0 -mt-6 -mr-6 h-24 w-24 rounded-full bg-linear-to-br from-purple-600/10 to-pink-600/5 blur-2xl transition-all duration-500 group-hover:from-purple-500/20 group-hover:to-pink-500/10" />
+                    <span className="relative mb-4 block text-3xl font-black text-white/4">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <h3 className="font-display relative mb-2 text-lg font-bold">{skill.label}</h3>
@@ -330,9 +330,9 @@ export default function HomePage() {
               </p>
               <Link
                 href="mailto:amaljithmvinod@gmail.com"
-                className="group relative inline-flex items-center gap-3 rounded-full border border-white/[0.15] px-8 py-4 text-sm font-semibold tracking-wide text-white/80 transition-all duration-300 hover:border-white/30 hover:text-white"
+                className="group relative inline-flex items-center gap-3 rounded-full border border-white/15 px-8 py-4 text-sm font-semibold tracking-wide text-white/80 transition-all duration-300 hover:border-white/30 hover:text-white"
               >
-                <span className="absolute inset-0 rounded-full bg-white/[0.02] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <span className="absolute inset-0 rounded-full bg-white/2 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <span className="relative">Send a message</span>
                 <ArrowUpRight className="relative h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </Link>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Manrope, Instrument_Serif, Sora, Unbounded } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
-import HashScrollHandler from "@/components/shared/HashScrollHandler";
 import InitialLoader from "@/components/shared/InitialLoader";
 
 const fontSans = Manrope({
@@ -49,7 +48,6 @@ export default function RootLayout({
       <body className="antialiased font-sans">
         <InitialLoader />
         <Header />
-        <HashScrollHandler />
         <main className="relative z-10">{children}</main>
       </body>
     </html>

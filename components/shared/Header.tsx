@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter, usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -14,9 +15,37 @@ const navLinks = [
   { label: "Contact", href: "/#contact" },
 ];
 
+function scrollToHash(href: string) {
+  const id = href.replace(/^\/?#/, "");
+  const target = document.getElementById(id);
+  const container = document.querySelector(".scroll-container") as HTMLElement | null;
+  if (target && container) {
+    container.scrollTo({ top: target.offsetTop, behavior: "smooth" });
+  }
+}
+
 export default function Header() {
+  const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    if (pathname === "/") {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => scrollToHash(hash), 100);
+      }
+    }
+  }, [pathname]);
+
+  function handleHashClick(href: string) {
+    if (pathname === "/") {
+      scrollToHash(href);
+    } else {
+      router.push(href);
+    }
+  }
 
   useEffect(() => {
     const container = document.querySelector(".scroll-container");
@@ -60,15 +89,26 @@ export default function Header() {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {navLinks.map((link) => (
+          {navLinks.map((link) => {
+            const isHash = link.href.startsWith("/#");
+            return (
             <Link
               key={link.href}
               href={link.href}
+              scroll={!isHash}
+              prefetch={!isHash}
+              onClick={(e) => {
+                if (isHash) {
+                  e.preventDefault();
+                  handleHashClick(link.href);
+                }
+              }}
               className="rounded-full px-4 py-2 text-sm text-white/50 transition-all duration-300 hover:bg-white/[0.04] hover:text-white"
             >
               {link.label}
             </Link>
-          ))}
+            );
+          })}
         </nav>
 
         <button
@@ -88,16 +128,27 @@ export default function Header() {
             : "pointer-events-none opacity-0"
         )}
       >
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            onClick={() => setOpen(false)}
-            className="text-3xl font-bold text-white/60 transition-colors hover:text-white"
-          >
-            {link.label}
-          </Link>
-        ))}
+          {navLinks.map((link) => {
+            const isHash = link.href.startsWith("/#");
+            return (
+            <Link
+              key={link.href}
+              href={link.href}
+              scroll={!isHash}
+              prefetch={!isHash}
+              onClick={(e) => {
+                setOpen(false);
+                if (isHash) {
+                  e.preventDefault();
+                  handleHashClick(link.href);
+                }
+              }}
+              className="text-3xl font-bold text-white/60 transition-colors hover:text-white"
+            >
+              {link.label}
+            </Link>
+            );
+          })}
       </div>
     </header>
   );
