@@ -335,7 +335,7 @@ export const projects: Project[] = [
       "/images/pgbee-banner.png",
     mockupImage: "/images/pgbee-mockup.webp",
     overview:
-      "It started as a hostel inder. Now, PgBee is a student housing platform that connects students with verified property owners in Trivandrum. It features a search-first experience, owner verification, and a simple dashboard for property management.",
+      "It started as a hostel finder. Now, PgBee is a student housing platform that connects students with verified property owners in Trivandrum. It features a search-first experience, owner verification, and a simple dashboard for property management.",
     process: [
       {
         title: "Discovery & Brief",

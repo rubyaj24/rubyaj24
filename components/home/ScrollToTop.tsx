@@ -44,7 +44,7 @@ export default function ScrollToTop() {
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
           onClick={scrollToTop}
-          className="fixed bottom-8 left-8 z-40 flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] backdrop-blur-md transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.06]"
+          className="fixed bottom-8 left-8 z-40 flex h-16 w-16 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] backdrop-blur-md transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.06]"
         >
           <ArrowUp className="h-4 w-4 text-white/60" />
         </motion.button>

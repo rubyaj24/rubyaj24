@@ -5,11 +5,18 @@ import { motion, useInView } from "framer-motion";
 
 const experiences = [
   {
-    role: "Founder",
+    role: "Co-Founder",
     company: "Izha",
     date: "2023 — Present",
     description:
       "Founded Izha, a platform for sharing and discovering design resources. Built the web app and designed the user experience.",
+  },
+  {
+    role: "CMO",
+    company: "PgBee",
+    date: "2026 — Present",
+    description:
+      "Led marketing and growth strategies for PgBee, a startup focused on educational technology. Managed social media and content creation.",
   },
   {
     role: "UI/UX Designer & Frontend Developer",
@@ -137,7 +144,7 @@ export default function ExperienceTimeline() {
 
   return (
     <div className="relative">
-      <div className="absolute left-[10px] top-0 h-full w-px bg-gradient-to-b from-transparent via-white/10 to-transparent md:left-1/2 md:-translate-x-px" />
+      <div className="absolute left-2.5 top-0 h-full w-px bg-linear-to-b from-transparent via-white/10 to-transparent md:left-1/2 md:-translate-x-px" />
 
       <div className="relative space-y-6">
         {experiences.map((exp, i) => (

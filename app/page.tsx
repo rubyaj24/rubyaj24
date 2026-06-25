@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight, GithubIcon, LinkedinIcon, Mail, Plus, TwitterIcon } from "lucide-react";
+import { ArrowRight, ArrowUpRight, DribbbleIcon, GithubIcon, LinkedinIcon, Mail, Plus, TwitterIcon } from "lucide-react";
 import { featuredProjects, recentProjects } from "@/lib/data/projects";
 import FeaturedProjectSection from "@/components/home/FeaturedProjectSection";
 import ProjectNav from "@/components/home/ProjectNav";
@@ -17,11 +17,12 @@ import GradualBlur from "@/components/shared/GradualBlur";
 import ExperienceTimeline from "@/components/home/ExperienceTimeline";
 
 const socialLinks = [
-  { icon: <TwitterIcon className="inline-block h-6 w-6" />, url: "https://twitter.com/amaljith", label: "Twitter" },
+  // { icon: <TwitterIcon className="inline-block h-6 w-6" />, url: "https://twitter.com/amaljith", label: "Twitter" },
   { icon: <LinkedinIcon className="inline-block h-6 w-6" />, url: "https://linkedin.com/in/amaljithmv2004", label: "LinkedIn" },
   { icon: <GithubIcon className="inline-block h-6 w-6" />, url: "https://github.com/amaljith", label: "GitHub" },
+  { icon: <DribbbleIcon className="inline-block h-6 w-6" />, url: "https://dribbble.com/amaljith", label: "Dribbble" },
   { icon: <ArrowUpRight className="inline-block h-6 w-6" />, url: "https://behance.net/amaljithmv", label: "Behance" },
-  { icon: <Mail className="inline-block h-6 w-6" />, url: "mailto:amaljithmvinod@gmail.com", label: "Email" },
+  // { icon: <Mail className="inline-block h-6 w-6" />, url: "mailto:amaljithmvinod@gmail.com", label: "Email" },
 ];
 
 const skills = [
@@ -129,9 +130,24 @@ export default function HomePage() {
         {/* About */}
         <section id="about" className="scroll-section relative flex min-h-screen items-center px-6 py-28">
           <div className="mx-auto w-full max-w-7xl">
-            <SectionHeading label="About Me" title="Designer, Developer, Storyteller" />
             <div className="grid gap-8 md:grid-cols-[1.3fr_1fr] md:items-start">
-              <FadeIn>
+              <div className="grid gap-5 md:order-2">
+                <FadeIn delay={0.08}>
+                  <div className="overflow-hidden pointer-events-none">
+                    <Image
+                      src="/images/amaljith.png"
+                      alt="Portrait of Amaljith"
+                      width={960}
+                      height={1200}
+                      className="h-full w-full object-cover object-top"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      priority
+                    />
+                  </div>
+                </FadeIn>
+              </div>
+              <FadeIn className="md:order-1">
+                <SectionHeading label="About Me" title="Designer, Developer, Storyteller" />
                 <div className="rounded-2xl border border-white/6 bg-white/2 p-7 md:p-9">
                   <p className="text-base leading-relaxed text-white/70 md:text-lg">
                     I am <span className="font-serif italic text-white">Amaljith</span>, a multi-disciplinary creator blending UI/UX design,
@@ -163,22 +179,6 @@ export default function HomePage() {
                   ))}
                 </div>
               </FadeIn>
-              
-              <div className="grid gap-5">
-                <FadeIn delay={0.08}>
-                  <div className="overflow-hidden rounded-2xl border border-white/8 bg-white/2">
-                    <Image
-                      src="/images/amaljith.png"
-                      alt="Portrait of Amaljith"
-                      width={960}
-                      height={1200}
-                      className="h-full w-full object-cover object-top"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      priority
-                    />
-                  </div>
-                </FadeIn>
-              </div>
             </div>
           </div>
         </section>
@@ -206,7 +206,7 @@ export default function HomePage() {
                   </h2>
                   <Link
                     href="/case-studies"
-                    className="group hidden items-center gap-2 text-sm font-medium text-white/40 transition-colors hover:text-white md:flex"
+                    className="group hidden items-center rounded-full border border-white/6 gap-2 px-6 py-4 text-sm font-medium text-white/40 bg-white/2 transition-colors hover:text-white md:flex"
                   >
                     View all
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
