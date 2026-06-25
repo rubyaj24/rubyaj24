@@ -27,3 +27,14 @@ dist-ssr
 # Local debug artifacts
 dev-error.txt
 dev-output.txt
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+
+.env*
+!.env.example
