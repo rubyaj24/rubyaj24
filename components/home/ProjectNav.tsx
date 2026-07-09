@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+
 import type { Project } from "@/lib/types";
 
 interface Props {
@@ -46,39 +46,29 @@ export default function ProjectNav({ projects }: Props) {
 
   return (
     <nav
-      className={cn(
-        "fixed right-8 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-end gap-5 transition-all duration-300 md:flex",
-        isInProjectSections
-          ? "pointer-events-auto opacity-100"
-          : "pointer-events-none opacity-0"
-      )}
+      className={`fixed right-8 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-end gap-5 transition-all duration-300 md:flex ${
+        isInProjectSections ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+      }`}
     >
       {projects.map((project, i) => (
         <a
           key={project.slug}
           href={`#project-${project.slug}`}
-          className={cn(
-            "group flex items-center gap-3 transition-all duration-500",
+          className={`group flex items-center gap-3 transition-all duration-500 ${
             activeIndex === i ? "opacity-100" : "opacity-25 hover:opacity-60"
-          )}
+          }`}
         >
           <span
-            className={cn(
-              "text-right text-xs font-medium transition-all duration-500",
-              activeIndex === i
-                ? "text-white"
-                : "text-white/50"
-            )}
+            className={`text-right text-xs font-medium transition-all duration-500 ${
+              activeIndex === i ? "text-white" : "text-white/50"
+            }`}
           >
             {project.title}
           </span>
           <span
-            className={cn(
-              "inline-block transition-all duration-500",
-              activeIndex === i
-                ? "h-8 w-[2px] bg-white"
-                : "h-4 w-[1px] bg-white/30 group-hover:h-6"
-            )}
+            className={`inline-block transition-all duration-500 ${
+              activeIndex === i ? "h-8 w-[2px] bg-white" : "h-4 w-[1px] bg-white/30 group-hover:h-6"
+            }`}
           />
         </a>
       ))}

@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "Me", href: "/#about" },
@@ -65,13 +64,9 @@ export default function Header() {
 
   return (
     <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        scrolled
-          ? "bg-bg/10 backdrop-blur-xl"
-          : "bg-transparent"
-      )}
-    >
+      className={`${scrolled ? "bg-bg/10 backdrop-blur-xl" : 
+        "bg-transparent"} 
+        fixed top-0 left-0 right-0 z-50 transition-all duration-500`}    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <Link
           href="/"
@@ -121,12 +116,9 @@ export default function Header() {
       </div>
 
       <div
-        className={cn(
-          "fixed inset-0 z-40 flex flex-col items-center justify-center gap-10 bg-bg transition-all duration-500 md:hidden",
-          open
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
-        )}
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-10 bg-bg transition-all duration-500 md:hidden ${
+          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        }`}
       >
           {navLinks.map((link) => {
             const isHash = link.href.startsWith("/#");

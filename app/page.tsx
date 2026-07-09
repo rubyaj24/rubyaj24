@@ -20,7 +20,7 @@ const socialLinks = [
   // { icon: <TwitterIcon className="inline-block h-6 w-6" />, url: "https://twitter.com/amaljith", label: "Twitter" },
   { icon: <LinkedinIcon className="inline-block h-6 w-6" />, url: "https://linkedin.com/in/amaljithmv2004", label: "LinkedIn" },
   { icon: <GithubIcon className="inline-block h-6 w-6" />, url: "https://github.com/amaljith", label: "GitHub" },
-  { icon: <DribbbleIcon className="inline-block h-6 w-6" />, url: "https://dribbble.com/amaljith", label: "Dribbble" },
+  { icon: <DribbbleIcon className="inline-block h-6 w-6" />, url: "https://dribbble.com/amaljithmvinod", label: "Dribbble" },
   { icon: <ArrowUpRight className="inline-block h-6 w-6" />, url: "https://behance.net/amaljithmv", label: "Behance" },
   // { icon: <Mail className="inline-block h-6 w-6" />, url: "mailto:amaljithmvinod@gmail.com", label: "Email" },
 ];
