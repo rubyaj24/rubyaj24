@@ -19,19 +19,50 @@ import ExperienceTimeline from "@/components/home/ExperienceTimeline";
 const socialLinks = [
   // { icon: <TwitterIcon className="inline-block h-6 w-6" />, url: "https://twitter.com/amaljith", label: "Twitter" },
   { icon: <LinkedinIcon className="inline-block h-6 w-6" />, url: "https://linkedin.com/in/amaljithmv2004", label: "LinkedIn" },
-  { icon: <GithubIcon className="inline-block h-6 w-6" />, url: "https://github.com/amaljith", label: "GitHub" },
+  { icon: <GithubIcon className="inline-block h-6 w-6" />, url: "https://github.com/rubyaj24", label: "GitHub" },
   { icon: <DribbbleIcon className="inline-block h-6 w-6" />, url: "https://dribbble.com/amaljithmvinod", label: "Dribbble" },
   { icon: <ArrowUpRight className="inline-block h-6 w-6" />, url: "https://behance.net/amaljithmv", label: "Behance" },
   // { icon: <Mail className="inline-block h-6 w-6" />, url: "mailto:amaljithmvinod@gmail.com", label: "Email" },
 ];
 
+// Solid (filled) icon paths, 24x24 viewBox — Material Design glyphs
 const skills = [
-  { label: "UI/UX Design", desc: "User research, wireframing, prototyping, visual design" },
-  { label: "Frontend Dev", desc: "React, Next.js, TypeScript, Tailwind CSS" },
-  { label: "Videography", desc: "Cinematography, storytelling, event coverage" },
-  { label: "Video Editing", desc: "Post-production, motion graphics, color grading" },
-  { label: "Graphic Design", desc: "Brand identity, social media content, print design" },
-  { label: "Web Development", desc: "Full-stack, APIs, CMS integration" },
+  {
+    label: "UI/UX Design",
+    desc: "User research, wireframing, prototyping, visual design",
+    iconPath:
+      "M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z",
+  },
+  {
+    label: "Frontend Dev",
+    desc: "React, Next.js, TypeScript, Tailwind CSS",
+    iconPath:
+      "M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z",
+  },
+  {
+    label: "Videography",
+    desc: "Cinematography, storytelling, event coverage",
+    iconPath:
+      "M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z",
+  },
+  {
+    label: "Video Editing",
+    desc: "Post-production, motion graphics, color grading",
+    iconPath:
+      "M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z",
+  },
+  {
+    label: "Graphic Design",
+    desc: "Brand identity, social media content, print design",
+    iconPath:
+      "M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z",
+  },
+  {
+    label: "Web Development",
+    desc: "Full-stack, APIs, CMS integration",
+    iconPath:
+      "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z",
+  },
 ];
 
 const faqs = [
@@ -277,6 +308,22 @@ export default function HomePage() {
                 <FadeIn key={skill.label} delay={i * 0.06} className="h-full">
                   <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/4 bg-white/2 p-7 transition-all duration-500 hover:border-white/10 hover:bg-white/4">
                     <div className="absolute top-0 right-0 -mt-6 -mr-6 h-24 w-24 rounded-full bg-linear-to-br from-purple-600/10 to-pink-600/5 blur-2xl transition-all duration-500 group-hover:from-purple-500/20 group-hover:to-pink-500/10" />
+                    <motion.svg
+                      aria-hidden
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="pointer-events-none absolute -bottom-6 -right-6 h-36 w-36 text-white/5 transition-colors duration-500 group-hover:text-white/10"
+                      initial={{ rotate: -12 }}
+                      animate={{ rotate: [-12, -6, -12], y: [0, -8, 0] }}
+                      transition={{
+                        duration: 6,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: i * 0.4,
+                      }}
+                    >
+                      <path d={skill.iconPath} />
+                    </motion.svg>
                     <span className="relative mb-4 block text-3xl font-black text-white/4">
                       {String(i + 1).padStart(2, "0")}
                     </span>
