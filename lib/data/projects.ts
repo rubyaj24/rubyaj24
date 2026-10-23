@@ -608,7 +608,6 @@ export const projects: Project[] = [
     location: "Remote",
     tags: ["UI/UX", "FULL-STACK", "WEB DEV"],
     heroImage: "/images/anekpath-banner.png",
-    mockupImage: "/images/anekpath-mockup.webp",
     overview:
       "A mentorship marketplace for young people and early professionals in Arts, Science, and Commerce. It connects students with real professionals who have walked non-linear career paths, turning vague advice into concrete next steps.",
     process: [
@@ -682,72 +681,79 @@ export const projects: Project[] = [
     title: "Dhwani '26",
     tagline: "Kerala's largest cultural fest, online.",
     links: [{ label: "Live Site", url: "https://dhwanicet.com" }],
-    category: "Frontend",
+    category: "Technical Lead",
     duration: "1 month",
     date: "Oct 2026",
     location: "CET, Trivandrum",
-    tags: ["FRONTEND", "WEB DEV", "UI/UX"],
+    tags: ["FRONTEND", "WEB DEV", "TECHNICAL LEADERSHIP"],
     heroImage: "/images/dhwani-banner.png",
     overview:
-      "The official website for Dhwani '26, the cultural festival of the College of Engineering Trivandrum, held across October 2–4, 2026. The site brings together the fest's pillars — Spotlight, Antara, Nadanta, Dionysia, Nazaara, Khelotsav, Rangam, and Carpe Dictum — along with tickets, merch, and campus ambassador sign-ups.",
+      "As Technical Convenor for Dhwani '26, I supervised the web team and proposed the framework design for the official website of CET Trivandrum's cultural festival. The site brings together the fest's pillars — Spotlight, Antara, Nadanta, Dionysia, Nazaara, Khelotsav, Rangam, and Carpe Dictum — along with tickets, merch, and campus ambassador sign-ups.",
     process: [
       {
-        title: "Discovery & Brief",
-        description: "Mapped the fest's events, pillars, and ticketing needs into a site structure",
+        title: "Planning & Scope",
+        description: "As Technical Convenor, defined requirements for the fest website and scoped work for the web team",
+      },
+      {
+        title: "Framework Design",
+        description: "Proposed the tech stack and architecture (Vite + React, routing, component structure, and asset strategy)",
+      },
+      {
+        title: "Team Supervision",
+        description: "Supervised and reviewed the team's work, set coding standards, and unblocked integration issues",
       },
       {
         title: "Wireframing & IA",
-        description: "Structured a long, section-based landing page that stays scannable on mobile",
+        description: "Worked on information architecture to structure events, tickets, merch, and campus ambassador flows",
       },
       {
-        title: "Visual Design",
-        description: "Bold, cinematic art direction built around the Dhwani '26 identity and mascot",
+        title: "Visual Direction",
+        description: "Guided the UI direction around the Dhwani '26 identity while keeping the build performant",
       },
       {
-        title: "Design System / UI Build",
-        description: "Turned event cards, pillars, and sponsor blocks into reusable React components",
-      },
-      {
-        title: "Development",
-        description: "Built with Vite and React, with Lenis smooth scrolling and Motion-driven animations",
+        title: "Implementation Oversight",
+        description: "Reviewed PRs and ensured consistent component patterns as the team built with Lenis and Motion",
       },
       {
         title: "Testing & Launch",
-        description: "Tested performance and responsiveness before going live for the fest weekend",
+        description: "Oversaw QA, performance checks, and deployment ahead of the October 2–4 fest",
       },
     ],
     challenge: [
+      "Coordinating a web team to ship a large festival site under a tight deadline",
       "A huge amount of event, ticketing, and sponsor content had to fit one cohesive experience",
       "The site needed to feel like a festival, without becoming slow or hard to navigate",
-      "Traffic spikes during the fest weekend demanded a fast, resilient frontend",
     ],
     approach: [
-      "Broke the fest into clear sections for events, competitions, workshops, and passes",
-      "Used motion and smooth scrolling sparingly so the page stays quick on mid-range phones",
-      "Linked out to MakeMyPass for ticket sales instead of rebuilding a payment flow",
+      "Proposed a Vite + React architecture with clear component boundaries for easier parallel work",
+      "Supervised the team, reviewed code, and enforced a reusable design system approach",
+      "Kept the frontend lean with Lenis/Motion used purposefully, and linked to MakeMyPass for ticket sales",
     ],
     methodology: [
+      {
+        title: "Technical Leadership",
+        description:
+          "As Technical Convenor, I proposed the framework design and supervised the web team from scoping through launch, ensuring the chosen stack fit the timeline and scale.",
+      },
       {
         title: "Content & Structure",
         description:
           "Organised the fest's pillars and sub-events into a single narrative flow, so visitors can move from the vibe of Dhwani straight to the event they care about.",
       },
       {
-        title: "Motion & Visual Design",
+        title: "Implementation & Oversight",
         description:
-          "Built a cinematic, dark-toned look around the Dhwani '26 branding, using Motion for scroll-triggered reveals and Lenis for smooth, weighted scrolling.",
-      },
-      {
-        title: "Frontend Development",
-        description:
-          "Implemented the site in React with Vite for fast builds and a lean bundle. Kept components reusable so event and sponsor content could be updated quickly in the run-up to the fest.",
+          "Guided the team in building with Vite + React, keeping components reusable and performance in check. Used Motion and Lenis deliberately to keep the experience fast on mid-range devices.",
       },
     ],
     conclusion:
-      "Dhwani '26 went live for the October 2–4 festival, giving students and visitors a single place to explore events and get passes.",
+      "As Technical Convenor, I supervised the web team and proposed the framework design for dhwanicet.com, which went live for Dhwani '26 (October 2–4), giving students and visitors a single place to explore events and get passes.",
     gallery: [
       "/images/dhwani-gallery-1.png",
       "/images/dhwani-gallery-2.png",
+      "/images/dhwani-gallery-3.png",
+      "/images/dhwani-gallery-4.png",
+      "/images/dhwani-gallery-5.png",
     ],
     color: "#1f1d66",
   },
@@ -765,5 +771,5 @@ function parseDate(date: string): number {
 
 const sorted = [...projects].sort((a, b) => parseDate(b.date) - parseDate(a.date));
 
-export const featuredProjects = projects.slice(0, 3);
+export const featuredProjects = [projects[0], projects[projects.length - 2], projects[projects.length - 1]];
 export const recentProjects = sorted.slice(0, 3);
