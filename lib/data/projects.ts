@@ -597,6 +597,160 @@ export const projects: Project[] = [
     ],
     color: "#E8DBC9",
   },
+  {
+    slug: "anekpath",
+    title: "AnekPath",
+    tagline: "Careers shaped by choice, not chance.",
+    links: [{ label: "Live Site", url: "https://anekpath.com" }],
+    category: "Full-Stack & UI/UX",
+    duration: "1 month",
+    date: "Oct 2026",
+    location: "Remote",
+    tags: ["UI/UX", "FULL-STACK", "WEB DEV"],
+    heroImage: "/images/anekpath-banner.png",
+    mockupImage: "/images/anekpath-mockup.webp",
+    overview:
+      "A mentorship marketplace for young people and early professionals in Arts, Science, and Commerce. It connects students with real professionals who have walked non-linear career paths, turning vague advice into concrete next steps.",
+    process: [
+      {
+        title: "Discovery & Brief",
+        description: "Framed the problem: career guidance is generic while the right person to ask is hard to find",
+      },
+      {
+        title: "Research & Requirements",
+        description: "Studied mentorship platforms and mapped the journey for students outside tech-heavy streams",
+      },
+      {
+        title: "Wireframing & IA",
+        description: "Structured mentor discovery, profiles, and session booking into a simple flow",
+      },
+      {
+        title: "Visual Design",
+        description: "Warm, human-centred identity that avoids the cold, corporate tone of job boards",
+      },
+      {
+        title: "Design System / UI Build",
+        description: "Built reusable components and a consistent type and colour system",
+      },
+      {
+        title: "Development",
+        description: "Built with Next.js and Supabase for the pilot, adding Google/LinkedIn auth and Razorpay payments",
+      },
+      {
+        title: "Testing & Launch",
+        description: "Validated onboarding and mentor flows before launching the waitlist and public site",
+      },
+    ],
+    challenge: [
+      "Students in Arts, Science, and Commerce have few visible role models for non-linear careers",
+      "Mentors needed a low-friction way to offer guidance without becoming a full-time counsellor",
+      "The product had to build trust early, since it asks people to act on career advice",
+    ],
+    approach: [
+      "Designed mentor profiles around real career arcs rather than job titles",
+      "Built a waitlist-first onboarding flow to validate demand before scaling the marketplace",
+      "Added Google and LinkedIn sign-in with Razorpay payments so sessions could be booked and paid for in one place",
+    ],
+    methodology: [
+      {
+        title: "Problem Framing",
+        description:
+          "Started from the insight that career advice is everywhere but the right person to ask is not. Positioned the product around human connection instead of content libraries.",
+      },
+      {
+        title: "UX & UI Design",
+        description:
+          "Designed a search-led experience with mentor cards, career timelines, and clear next steps. The visual language stays warm and approachable to reduce the anxiety around career decisions.",
+      },
+      {
+        title: "Development",
+        description:
+          "Shipped the pilot on Next.js and Supabase, with Google and LinkedIn authentication for low-friction sign-up. Integrated Razorpay to handle mentor session payments, and built the mentor profiles and booking flow on top of Supabase.",
+      },
+    ],
+    conclusion:
+      "AnekPath launched its pilot with a mentor waitlist, Google and LinkedIn sign-in, and Razorpay payments — giving students in Arts, Science, and Commerce a dedicated space to find guidance from people who have actually walked the path.",
+    gallery: [
+      "/images/anekpath-gallery-1.png",
+      "/images/anekpath-gallery-2.png",
+      "/images/anekpath-gallery-3.png",
+    ],
+    color: "#1F4B43",
+  },
+  {
+    slug: "dhwani-26",
+    title: "Dhwani '26",
+    tagline: "Kerala's largest cultural fest, online.",
+    links: [{ label: "Live Site", url: "https://dhwanicet.com" }],
+    category: "Frontend",
+    duration: "1 month",
+    date: "Oct 2026",
+    location: "CET, Trivandrum",
+    tags: ["FRONTEND", "WEB DEV", "UI/UX"],
+    heroImage: "/images/dhwani-banner.png",
+    overview:
+      "The official website for Dhwani '26, the cultural festival of the College of Engineering Trivandrum, held across October 2–4, 2026. The site brings together the fest's pillars — Spotlight, Antara, Nadanta, Dionysia, Nazaara, Khelotsav, Rangam, and Carpe Dictum — along with tickets, merch, and campus ambassador sign-ups.",
+    process: [
+      {
+        title: "Discovery & Brief",
+        description: "Mapped the fest's events, pillars, and ticketing needs into a site structure",
+      },
+      {
+        title: "Wireframing & IA",
+        description: "Structured a long, section-based landing page that stays scannable on mobile",
+      },
+      {
+        title: "Visual Design",
+        description: "Bold, cinematic art direction built around the Dhwani '26 identity and mascot",
+      },
+      {
+        title: "Design System / UI Build",
+        description: "Turned event cards, pillars, and sponsor blocks into reusable React components",
+      },
+      {
+        title: "Development",
+        description: "Built with Vite and React, with Lenis smooth scrolling and Motion-driven animations",
+      },
+      {
+        title: "Testing & Launch",
+        description: "Tested performance and responsiveness before going live for the fest weekend",
+      },
+    ],
+    challenge: [
+      "A huge amount of event, ticketing, and sponsor content had to fit one cohesive experience",
+      "The site needed to feel like a festival, without becoming slow or hard to navigate",
+      "Traffic spikes during the fest weekend demanded a fast, resilient frontend",
+    ],
+    approach: [
+      "Broke the fest into clear sections for events, competitions, workshops, and passes",
+      "Used motion and smooth scrolling sparingly so the page stays quick on mid-range phones",
+      "Linked out to MakeMyPass for ticket sales instead of rebuilding a payment flow",
+    ],
+    methodology: [
+      {
+        title: "Content & Structure",
+        description:
+          "Organised the fest's pillars and sub-events into a single narrative flow, so visitors can move from the vibe of Dhwani straight to the event they care about.",
+      },
+      {
+        title: "Motion & Visual Design",
+        description:
+          "Built a cinematic, dark-toned look around the Dhwani '26 branding, using Motion for scroll-triggered reveals and Lenis for smooth, weighted scrolling.",
+      },
+      {
+        title: "Frontend Development",
+        description:
+          "Implemented the site in React with Vite for fast builds and a lean bundle. Kept components reusable so event and sponsor content could be updated quickly in the run-up to the fest.",
+      },
+    ],
+    conclusion:
+      "Dhwani '26 went live for the October 2–4 festival, giving students and visitors a single place to explore events and get passes.",
+    gallery: [
+      "/images/dhwani-gallery-1.png",
+      "/images/dhwani-gallery-2.png",
+    ],
+    color: "#1f1d66",
+  },
 ];
 
 const monthOrder: Record<string, number> = {
